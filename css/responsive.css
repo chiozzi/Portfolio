@@ -1,39 +1,60 @@
-/* --- Responsividade --- */
+/* Para tablets e telas médias (até 768px) */
+@media (max-width: 768px) {
+  /* NAV BAR */
+  nav {
+    height: 60px;
+    padding: 0 10px;
+  }
+  
+  .leticiacode-logo {
+    font-size: 25px;
+    margin-left: 10px;
+  }
 
-/* Para telas menores que 1024px (tablets grandes e laptops pequenos) */
-@media (max-width: 1024px) {
+  .leticiacode-logo img {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+  }
+
+  nav ul {
+    gap: 15px;
+    padding-right: 10px;
+  }
+
+  nav ul li {
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  /* SESSÃO INTRO */
   .intro {
     flex-direction: column;
     height: auto;
     padding: 20px 10px;
-  }
-  .intro-content,
-  .img-intro-content {
-    flex: unset;
-    width: 100%;
     text-align: center;
+  }
+
+  .intro-content {
+    flex: unset;
     margin-bottom: 20px;
   }
 
-  nav ul {
-    font-size: 16px;
+  .img-intro {
+    width: 150px;
   }
 
+  /* SESSÃO SOBRE E HABILIDADES */
   .sobre-habilidades {
-    padding: 30px 20px;
-    margin: 30px 10px;
-    gap: 50px;
     flex-direction: column;
-    align-items: center;
-  }
-  .sobre-content,
-  .habilidades-content {
-    width: 100%;
+    padding: 20px 10px;
+    margin: 20px 10px;
+    gap: 40px;
   }
 
+  /* SESSÃO PROJETOS */
   .projetos {
-    margin: 30px 10px;
-    padding: 15px;
+    margin: 20px 10px;
   }
 
   .projetos-box {
@@ -42,84 +63,68 @@
   }
 
   .projetos-box-content {
-    width: 100%;
-    max-width: 350px;
+    width: 90%;
     height: auto;
-    margin-bottom: 30px;
+    padding: 20px;
   }
 
+  /* SESSÃO CONTATO */
   .contato {
-    margin: 30px 10px;
-    padding: 15px;
+    margin: 20px 10px;
+    padding: 20px 10px;
   }
 
   .contato-box {
     gap: 30px;
     justify-content: center;
   }
-}
 
-/* Para telas menores que 600px (celulares) */
-@media (max-width: 600px) {
-  nav {
-    flex-wrap: wrap;
-    height: auto;
-    padding: 10px 0;
+  .contato-box-content {
+    width: 80px;
+    height: 80px;
   }
 
-  .leticiacode-logo {
-    margin-left: 10px;
+  .contato-box-content button {
+    width: 60px;
+    height: 60px;
     font-size: 24px;
   }
-  .leticiacode-logo p {
-    font-size: 22px;
-  }
-  .leticiacode-logo img {
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-  }
 
+  .contato-box-content button i {
+    font-size: 30px;
+  }
+}
+
+/* Para celulares (até 480px) */
+@media (max-width: 480px) {
   nav ul {
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 10px;
+    display: none; /* Esconder o menu no mobile, por exemplo, para usar um menu hamburguer */
   }
 
-  nav ul li {
-    margin: 5px 10px;
-    padding: 8px 12px;
-    font-size: 16px;
+  /* Para logo e navbar */
+  .leticiacode-logo {
+    font-size: 20px;
+    margin-left: 10px;
   }
 
-  #toggle-dark-mode {
-    margin: 10px auto;
-  }
-
-  .intro {
-    height: auto;
-    padding: 15px 10px;
+  .leticiacode-logo img {
+    width: 25px;
+    height: 25px;
   }
 
   .intro-content h1 {
     font-size: 28px;
   }
-  .intro-content p,
+
+  .intro-content p {
+    font-size: 16px;
+  }
+
   .btn {
     font-size: 16px;
   }
 
-  .img-intro {
-    width: 150px;
-  }
-
-  .sobre-habilidades {
-    margin: 20px 5px;
-    padding: 15px 10px;
-    gap: 30px;
-  }
-
+  /* Ajustar sobre e habilidades */
   .sobre-content h1,
   .habilidades-content h1,
   .projetos-content h1,
@@ -127,128 +132,9 @@
     font-size: 28px;
   }
 
-  .sobre-content p,
-  .projetos-content p,
-  .projetos-box-content p {
-    font-size: 14px;
-  }
-
-  .habilidades-icons {
-    gap: 15px;
-  }
-
-  .icone-box {
-    width: 90px;
-    height: 90px;
-    padding: 10px;
-  }
-
-  .icone-box i {
-    font-size: 28px;
-  }
-
-  .icone-box p {
-    font-size: 12px;
-  }
-
+  /* Projetos */
   .projetos-box-content {
     width: 100%;
-    max-width: none;
-    padding: 20px;
-  }
-
-  .projetos-box-content img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .projetos-box-content h2 {
-    font-size: 18px;
-  }
-
-  .projetos-box-content a {
-    padding: 10px;
-    font-size: 16px;
-  }
-
-  .contato-box-content {
-    width: 70px;
-    height: 70px;
-  }
-
-  .contato-box-content button {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    border-radius: 15px;
-  }
-
-  .contato-box-content button i {
-    font-size: 28px;
-  }
-
-  footer p {
-    font-size: 12px;
-    padding: 8px;
-  }
-}
-
-/* --- Ajustes extras para responsividade e melhor leitura geral --- */
-
-/* Telas menores que 400px */
-@media (max-width: 400px) {
-  html {
-    font-size: 14px;
-  }
-
-  .intro-content h1 {
-    font-size: 24px;
-  }
-
-  .projetos-box-content {
     padding: 15px;
-  }
-
-  .projetos-box-content h2 {
-    font-size: 16px;
-  }
-
-  .projetos-box-content a {
-    font-size: 14px;
-  }
-
-  .contato-box-content {
-    width: 60px;
-    height: 60px;
-  }
-
-  .contato-box-content button {
-    width: 45px;
-    height: 45px;
-    font-size: 18px;
-  }
-}
-
-/* Impede que imagens quebrem o layout */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Garante boa transição de animação */
-[data-aos] {
-  opacity: 0;
-  transition-property: transform, opacity;
-  will-change: transform, opacity;
-}
-
-/* Estilização para tablets deitados */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .intro-content h1 {
-    font-size: 32px;
-  }
-
-  .btn {
-    font-size: 18px;
   }
 }
