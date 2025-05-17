@@ -1,0 +1,139 @@
+/* BODY */
+body.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* NAV BAR */
+body.dark-mode nav {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .leticiacode-logo p,
+body.dark-mode nav ul li a {
+    color: #db90e2;
+}
+
+body.dark-mode nav ul li:hover {
+    background-color: #b866be;
+}
+
+/* SESSÃO INTRO */
+body.dark-mode .intro {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .intro-content h1 {
+    color: #db90e2;
+}
+
+body.dark-mode .intro-content p {
+    color: #db90e2;
+}
+
+body.dark-mode .btn {
+    color: #db90e2;
+}
+
+body.dark-mode .btn:hover {
+    background-color: #b866be;
+}
+
+body.dark-mode .img-intro-content .img-intro {
+    border-color: #db90e2;
+}
+
+/* SESSÃO SOBRE E HABILIDADES */
+body.dark-mode .sobre-habilidades {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .sobre-content h1,
+body.dark-mode .habilidades-content h1 {
+    color: #db90e2;
+}
+
+body.dark-mode .sobre-content p {
+    color: #f0f0f0;
+}
+
+
+
+body.dark-mode .icone-box {
+    background-color: #292929;
+    border-color: #b866be;
+}
+
+body.dark-mode .icone-box i {
+    color: #db90e2;
+}
+
+body.dark-mode .icone-box p {
+    color: #f0f0f0;
+}
+
+
+/* SESSÃO PROJETOS */
+body.dark-mode .projetos {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .projetos-content h1 {
+    color: #db90e2;
+}
+
+body.dark-mode .projetos-content p {
+    color: #f0f0f0;
+}
+
+
+body.dark-mode .projetos-box-content {
+    background-color: #292929;
+    border-color: #b866be;
+}
+
+body.dark-mode .projetos-box-content h2 {
+    color: #db90e2;
+}
+
+body.dark-mode .projetos-box-content p {
+    color: #f0f0f0;
+}
+
+body.dark-mode .projetos-box-content a {
+    background-color: #b866be;
+    color: white;
+}
+
+/* SESSÃO CONTATO */
+body.dark-mode .contato {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .contato-content h1 {
+    color: #dbb3df;
+}
+
+
+
+body.dark-mode .contato-box-content button {
+    background-color: #66056d;
+}
+
+body.dark-mode .contato-box-content button i {
+    color: white;
+}
+
+/* FOOTER */
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode footer p {
+    color: #f0f0f0;
+}
+
+/* DARK MODE TOGGLE BUTTON */
+body.dark-mode #toggle-dark-mode {
+    color: #f0f0f0;
+}

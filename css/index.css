@@ -1,0 +1,598 @@
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Comfortaa, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;    
+    transition: background-color 0.5s ease, color 0.5s ease;          
+}
+
+
+
+/* NAV BAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #66056d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    align-items: center;
+    height: 80px;
+    
+}
+
+
+/* logo da nav */
+.leticiacode-logo {
+    display: flex;            /* Alinha elementos lado a lado */
+    align-items: center;      /* Alinha verticalmente */
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    margin-left: 30px;
+}
+
+
+/* imagem da logo da nav */
+.leticiacode-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;       /* Espaço entre a imagem e o texto */
+    border-radius: 7px;
+}
+
+/* texto da logo da nav */
+.leticiacode-logo p {
+    font-size: 30px;
+    color: white;
+    margin: 0;                /* Remove margem padrão para melhor alinhamento */
+}
+
+
+
+/* links da nav */
+nav ul {
+    margin: 0;
+    padding: 0 30px 0 0; /* um padding à direita para não grudar na borda */
+    display: flex;
+    list-style: none;
+    gap: 30px; /* espaçamento entre os itens */
+    align-items: center;
+    flex-grow: 1;            /* faz o ul crescer para ocupar espaço */
+    justify-content: flex-end; /* alinha os itens do ul para a direita */
+}
+
+
+/* cada item da nav */
+nav ul li {
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background 0.3s;
+    font-size: 20px;
+}
+
+
+
+ /* quando passar o mouse em cima do item */
+nav ul li:hover {
+    background-color: #b866be;
+}
+
+/* cada texto dos links */
+nav ul li a { 
+    text-decoration: underline;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+
+/* BOTÃO MODO ESCURO */
+#toggle-dark-mode {
+    position: static; /* ou remova */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+body.dark-mode #toggle-dark-mode {
+    color: #f0f0f0;
+}
+
+/* Container do toggle */
+.dark-mode-toggle {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* Esconde o checkbox */
+.dark-mode-toggle input {
+    display: none;
+}
+
+/* Estilo do "slider" (label) */
+.dark-mode-toggle label {
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    box-sizing: border-box;
+    transition: background-color 0.3s;
+}
+
+/* Ícones */
+.dark-mode-toggle .icon {
+    font-size: 18px;
+    user-select: none;
+    pointer-events: none;
+    color: #555;
+    transition: color 0.3s;
+    margin: -3px;
+}
+
+/* Bola do toggle */
+.dark-mode-toggle .toggle-ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+/* Estado ativo: checkbox marcado */
+.dark-mode-toggle input:checked + label {
+    background-color: #66056d;
+    color: #f0f0f0;
+}
+
+/* Move a bolinha */
+.dark-mode-toggle input:checked + label .toggle-ball {
+    transform: translateX(30px);
+}
+
+/* Cores dos ícones conforme estado */
+.dark-mode-toggle input:checked + label .moon {
+    color: #f0f0f0;
+}
+
+.dark-mode-toggle input:not(:checked) + label .sun {
+    color: #999;
+}
+
+
+
+/* SESSÃO INTRO */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #66056d;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    height: 600px;
+}
+
+/* texto da sessão intro */
+.intro-content {
+    flex: 1;
+    text-align: center;
+}
+
+/*titulo da sessão intro */
+.intro-content h1 {
+    font-size: 40px;
+    color: #dbb3df;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* texto da sessão intro */
+.intro-content p {
+    font-size: 20px;
+    color: white;
+    
+}
+
+/* botão da sessão intro */
+.btn {
+    text-decoration: underline;
+    color: #dbb3df;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background 0.3s;
+    font-size: 20px;
+}
+
+.btn:hover { /* quando passar o mouse em cima do item */
+    background-color: #b866be;
+}
+
+/* ícone so mouse */
+i {
+    margin-left: 7px;
+}
+
+
+
+/* imagem da sessão intro */
+.img-intro-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* realmente a imagem da sessão intro */
+.img-intro {
+    width: 250px;
+    border: 2px solid #dbb3df;
+    border-radius: 50%;
+}
+
+
+
+
+/* SESSÃO SOBRE E HABILIDADES */
+.sobre-habilidades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px; 
+    padding: 50px; 
+    margin: 50px;
+    border-radius: 10px;
+}
+
+
+/* texto de sobre */
+.sobre-content {
+    flex: 1;
+    text-align: center;
+}
+/* titulo de sobre */
+.sobre-content h1 {
+    font-size: 40px;
+    color: #66056d;
+    font-weight: bold;
+}
+/* texto de sobre */
+.sobre-content p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+    line-height: 1.5; /* Aumenta o espaçamento entre linhas */
+}
+
+
+
+/* texto de habilidades */
+.habilidades-content {
+    flex: 1;
+    text-align: center;
+}
+/* titulo de habilidades */
+.habilidades-content h1 {
+    font-size: 40px;
+    color: #66056d;
+    font-weight: bold;
+}
+
+/* container dos icons */
+.habilidades-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* espaço entre as caixinhas */
+}
+
+/* cada caixinha dos icons */
+.icone-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    padding: 15px;
+    border: 1px solid #b866be;
+    border-radius: 3px;
+    background-color: #dbb3df;
+   
+}
+
+/* cada icone */
+.icone-box i {
+    font-size: 40px;
+    color: #66056d;
+    margin-bottom: 10px;
+    line-height: 1; /* Alinha o icone no centro */
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* texto de cada icone */
+.icone-box p {
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1; /* Alinha o texto no centro */
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SESSÃO PROJETOS */
+.projetos {
+    display: flex;
+    flex-direction: column; /* Alinha os itens (h1 e p) em coluna, com o título em cima */
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 20px;
+    background-color: #dbb3df;
+    border-radius: 10px;
+    flex-wrap: wrap;
+
+}
+
+.projetos-content {
+    flex: 1;
+    text-align: center;
+}
+/* titulo da sessão projetos */
+.projetos-content h1 {
+    font-size: 40px;
+    color: #66056d;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* texto da sessão projetos */
+.projetos-content p {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* container dos projetos */
+.projetos-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px; /* espaço entre as caixinhas */
+
+}
+/* cada caixinha dos projetos */
+.projetos-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    padding: 30px;
+    border: 1px solid #66056d;
+    border-radius: 30px;
+    background-color: #b866be;
+    min-height: 300px; /* altura mínima para manter o layout */
+    height: auto; /* ajuste automático */
+    margin-bottom: 40px; /* espaço entre as caixinhas */
+
+}
+/* cada imagem dos projetos */
+.projetos-box-content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+/* cada titulo dos projetos */
+.projetos-box-content h2 {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* texto dos projetos */
+.projetos-box-content p {
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+/* texto das tec dos projetos */
+.tecnologias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    height: auto; /* ajuste automático */
+    gap: 5px; /* opcional para espaçamento entre techs */
+}
+
+/* botão de ver projeto */
+.projetos-box-content a {
+    text-decoration: none;
+    background-color: #66056d;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* SESSÃO CONTATO */
+.contato {
+    display: flex;
+    flex-direction: column; /* Alinha os itens (h1 e p) em coluna, com o título em cima */
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.contato-content {
+    flex: 1;
+    text-align: center;
+}
+/* titulo da sessão contato */
+.contato-content h1 {
+    font-size: 40px;
+    color: #66056d;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+/* box da sessão contato */
+.contato-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 70px; /* espaço entre as caixinhas */
+    margin-top: 30px;
+}
+/* cada caixinha da sessão contato */
+.contato-box-content {
+   padding: 5px;
+   width: 100px;
+   height: 100px;
+}
+/* cada botão da sessão contato */
+.contato-box-content button {
+    width: 70px;
+    height: 70px;
+    background-color: #66056d;
+    color: white;
+    font-size: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer; /* Muda o cursor para mãozinha ao passar em cima do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}   
+
+/* cada icone da sessão contato */
+.contato-box-content button i {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    display: block;
+    font-size: 40px;
+}
+
+.contato-box-content a {
+    outline: none;
+    text-decoration: none; /* remove qualquer sublinhado */
+}
+
+.contato-box-content a:focus,
+.contato-box-content a:active,
+.contato-box-content button:focus,
+.contato-box-content button:active {
+    outline: none;
+    box-shadow: none; /* caso algum shadow cause essa linha */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+footer {
+    background-color: #66056d;
+    color: white;
+    text-align: center;
+    padding: 0px    ;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    margin-top: 50px;
+    
+   
+}
+
+footer p {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0;
+    padding: 10px;
+ 
+}
+
