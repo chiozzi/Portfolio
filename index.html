@@ -14,6 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
 
@@ -48,7 +51,7 @@
       
     
     <main>
-        <section id="intro" class="intro">
+        <section id="intro" class="intro" data-aos="fade-up">
             <div class="intro-content">
                 <h1>Letícia Vitória</h1>
                 <!-- Linha com animação de digitação -->
@@ -64,7 +67,7 @@
 
 
         
-        <section id="sobre-habilidades" class="sobre-habilidades">
+        <section id="sobre-habilidades" class="sobre-habilidades" data-aos="fade-up">
             <div class="sobre-content">
                 <h1>Sobre</h1>
                 <p>Meu nome é Letícia Vitória, tenho 18 anos e sou estudante de Análise e Desenvolvimento de Sistemas. Estou sempre em busca de novos conhecimentos e desafios na área de tecnologia.</p>
@@ -93,7 +96,7 @@
             </div>
         </section>
 
-        <section id="projetos" class="projetos">
+        <section id="projetos" class="projetos" data-aos="fade-up">
             <div class="projetos-content">
                 <h1>Projetos</h1>
                 <p>Projetos desenvolvidos durante o curso de Análise e Desenvolvimento de Sistemas.</p>
@@ -200,7 +203,7 @@
 
 
 
-        <section id="contato" class="contato">
+        <section id="contato" class="contato" data-aos="fade-up">
             <div  class="contato-content">
                 <h1>Contato</h1>
                 <p>Entre em contato comigo pelas redes:</p>   
@@ -249,5 +252,12 @@
 
     <!-- JavaScript file -->
     <script src="script/script.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+
+    
 </body>
 </html>

@@ -4,10 +4,10 @@
 @media (max-width: 1024px) {
   .intro {
     flex-direction: column;
-    height: auto; /* altura automática para o conteúdo */
+    height: auto;
     padding: 20px 10px;
   }
-  .intro-content, 
+  .intro-content,
   .img-intro-content {
     flex: unset;
     width: 100%;
@@ -26,7 +26,7 @@
     flex-direction: column;
     align-items: center;
   }
-  .sobre-content, 
+  .sobre-content,
   .habilidades-content {
     width: 100%;
   }
@@ -40,7 +40,7 @@
     gap: 30px;
     justify-content: center;
   }
-  
+
   .projetos-box-content {
     width: 100%;
     max-width: 350px;
@@ -105,7 +105,8 @@
   .intro-content h1 {
     font-size: 28px;
   }
-  .intro-content p, .btn {
+  .intro-content p,
+  .btn {
     font-size: 16px;
   }
 
@@ -189,5 +190,65 @@
   footer p {
     font-size: 12px;
     padding: 8px;
+  }
+}
+
+/* --- Ajustes extras para responsividade e melhor leitura geral --- */
+
+/* Telas menores que 400px */
+@media (max-width: 400px) {
+  html {
+    font-size: 14px;
+  }
+
+  .intro-content h1 {
+    font-size: 24px;
+  }
+
+  .projetos-box-content {
+    padding: 15px;
+  }
+
+  .projetos-box-content h2 {
+    font-size: 16px;
+  }
+
+  .projetos-box-content a {
+    font-size: 14px;
+  }
+
+  .contato-box-content {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contato-box-content button {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+/* Impede que imagens quebrem o layout */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Garante boa transição de animação */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+  will-change: transform, opacity;
+}
+
+/* Estilização para tablets deitados */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .intro-content h1 {
+    font-size: 32px;
+  }
+
+  .btn {
+    font-size: 18px;
   }
 }
