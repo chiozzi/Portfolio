@@ -1,229 +1,178 @@
-/* Para tablets e telas médias (até 768px) */
-@media (max-width: 768px) {
-  /* NAV BAR */
-  nav {
-    position: relative; /* para o absolute do botão se basear aqui */
-    height: 60px;
-    padding: 0 10px;
-  }
-
-  .leticiacode-logo {
-    font-size: 25px;
-    margin-left: 10px;
-  }
-
-  .leticiacode-logo img {
-    width: 30px;
-    height: 30px;
-    margin-right: 8px;
-  }
-
-  nav ul {
-    gap: 15px;
-    padding-right: 10px;
-  }
-
-  nav ul li {
-    padding: 8px 12px;
-    font-size: 16px;
-  }
-
-  /* SESSÃO INTRO */
-  .intro {
-    flex-direction: column;
-    height: auto;
-    padding: 80px 10px 20px; /* Aumentei padding-top para não ficar atrás da navbar fixa */
-    text-align: center;
-  }
-
-  .intro-content {
-    flex: unset;
-    margin-bottom: 20px;
-  }
-
-  .img-intro {
-    width: 150px;
-  }
-
-  /* SESSÃO SOBRE E HABILIDADES */
-  .sobre-habilidades {
-    flex-direction: column;
-    padding: 20px 10px;
-    margin: 20px 10px;
-    gap: 40px;
-  }
-
-  /* SESSÃO PROJETOS */
-  .projetos {
-    margin: 20px 10px;
-  }
-
-  .projetos-box {
-    gap: 30px;
-    justify-content: center;
-  }
-
-  .projetos-box-content {
-    width: 90%;
-    height: auto;
-    padding: 20px;
-  }
-
-  /* Mostrar detalhes e esconder botão em tablets */
-  .detalhes-projeto {
-    display: block !important;
-  }
-  .btn-detalhes {
-    display: none !important;
-  }
-
-  /* SESSÃO CONTATO */
-  .contato {
-    margin: 20px 10px;
-    padding: 20px 10px;
-  }
-
-  .contato-box {
-    gap: 30px;
-    justify-content: center;
-  }
-
-  .contato-box-content {
-    width: 80px;
-    height: 80px;
-  }
-
-  .contato-box-content button {
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-  }
-
-  .contato-box-content button i {
-    font-size: 30px;
-  }
-}
-
-/* Para celulares (até 480px) */
-@media (max-width: 480px) {
-  /* Esconder menu padrão */
-  nav ul {
-    display: none;
-    position: fixed;
-    top: 80px; /* altura da navbar fixa */
-    right: 0;
-    background-color: #66056d;
-    width: 200px;
-    padding: 20px;
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 0 0 0 10px;
-    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-  }
-
-  /* Mostrar menu quando ativo */
-  nav ul.show {
-    display: flex;
-  }
-
-  /* Botão hamburguer */
+@media screen and (max-width: 1023px) {
+  /* MENU */
   .menu-toggle {
-    position: absolute;
-    top: 25px;
-    right: 60px; /* distancia da borda direita */
-    background: red; /* para visualizar o botão */
-    width: 40px;
-    height: 40px;
-    font-size: 28px;
-    color: white;
+    display: block;
+    margin-right: 10px; /* distância do botão dark mode */
+    position: relative;
+    z-index: 30; /* para ficar acima da nav */
     cursor: pointer;
-    z-index: 1100;
+  }
+
+  /* Botão Dark Mode */
+  #toggle-dark-mode {
+    position: relative;
+    z-index: 30;
+    margin-left: 10px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  nav {
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #66056d;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end; /* menu hamburguer à direita */
+    z-index: 25;
   }
 
-  .leticiacode-logo {
-    font-size: 20px;
-    margin-left: 10px;
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #66056d;
+    position: fixed;
+    top: 60px; /* abaixo da nav fixa */
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 0 10px;
+    z-index: 20;
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
+    box-sizing: border-box;
   }
 
-  .leticiacode-logo img {
-    width: 25px;
-    height: 25px;
+  nav ul.active {
+    display: flex;
   }
 
   nav ul li {
-    padding: 10px;
-    border-radius: 5px;
+    padding: 10px 0;
     font-size: 18px;
+    text-align: right;
+    width: 100%;
   }
 
   nav ul li:hover {
     background-color: #b866be;
   }
 
+  .leticiacode-logo {
+    font-size: 28px;
+    margin-left: 10px;
+  }
+
+  /* INTRO */
   .intro {
-    padding: 80px 10px 20px; /* para não ficar coberto pela navbar fixa */
+    flex-direction: column;
+    height: auto;
+    padding: 90px 10px 20px; /* empurra o conteúdo pra baixo, evitando ficar atrás da nav */
+    gap: 20px;
+    position: relative;
+    z-index: 10;
+  }
+
+  .intro-content {
     text-align: center;
   }
 
   .intro-content h1 {
-    font-size: 28px;
+    position: relative;
+    z-index: 15; /* para o nome ficar acima da nav */
   }
 
-  .intro-content p {
-    font-size: 16px;
+  .img-intro {
+    width: 180px;
+    border-width: 1.5px;
   }
 
-  .btn {
-    font-size: 16px;
+
+  /* Seções em coluna com padding menor */
+  .sobre,
+  .habilidades-aprendendo {
+    flex-direction: column;
+    margin: 20px 10px;
+    padding: 20px 10px;
+    gap: 30px;
+    align-items: center;
   }
 
-  /* Ajustar títulos */
-  .sobre-content h1,
-  .habilidades-content h1,
-  .projetos-content h1,
-  .contato-content h1 {
-    font-size: 28px;
-  }
-
-  /* Projetos */
-  .projetos-box-content {
+  .sobre-content,
+  .habilidades-content,
+  .aprendendo-content {
+    text-align: center;
     width: 100%;
+  }
+
+  .habilidades-icons,
+  .aprendendo-icons {
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .icone-box {
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+  }
+
+  .icone-box i {
+    font-size: 30px;
+  }
+
+   /* Projetos */
+  .projetos {
+    margin: 20px 10px;
+    padding: 15px 10px;
+  }
+
+  .projetos-box {
+    flex-direction: column;
+    gap: 30px; /* menos espaçamento */
+    align-items: center;
+  }
+
+  .projetos-box-content {
+    width: 90%;
+    max-width: 320px; /* limitar largura dos cards */
+    min-height: auto;
     padding: 15px;
+    box-sizing: border-box;
   }
 
-  /* Detalhes inicialmente escondidos no celular */
-  .detalhes-projeto {
-    display: none;
-    margin-top: 15px;
-    color: white;
-    font-size: 16px;
+  /* Contato em grid compacto */
+  .contato {
+    margin: 20px 10px;
+    padding: 15px 10px;
   }
 
-  /* Botão para ver detalhes visível só no celular */
-  .btn-detalhes {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #66056d;
-    color: white;
+  .contato-box {
+    gap: 40px;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .contato-box-content {
+    width: 70px;
+    height: 70px;
+  }
+
+  .contato-box-content button {
+    width: 60px;
+    height: 60px;
+    font-size: 25px;
     border-radius: 15px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
   }
-}
 
-/* Esconder botão detalhes em telas maiores que 480px */
-@media (min-width: 481px) {
-  .btn-detalhes {
-    display: none !important;
-  }
-  .detalhes-projeto {
-    display: block !important;
+  /* Rodapé menor */
+  footer p {
+    font-size: 13px;
+    padding: 8px;
   }
 }

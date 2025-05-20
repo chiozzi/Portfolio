@@ -40,15 +40,6 @@ nav {
     margin-left: 30px;
 }
 
-
-/* imagem da logo da nav */
-.leticiacode-logo img {
-    width: 40px;
-    height: 40px;
-    margin-right: 12px;       /* Espaço entre a imagem e o texto */
-    border-radius: 7px;
-}
-
 /* texto da logo da nav */
 .leticiacode-logo p {
     font-size: 30px;

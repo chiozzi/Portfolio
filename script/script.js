@@ -1,13 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // 🌙 Modo Escuro
+  iniciarModoEscuro();
+  iniciarTypeWriter();
+  iniciarMenuHamburguer();
+  configurarDetalhes();
+});
+
+// 🌙 Modo Escuro com localStorage
+function iniciarModoEscuro() {
   const toggle = document.getElementById('toggle-dark-mode');
   if (toggle) {
+    // Verifica e aplica tema salvo
+    const isDark = localStorage.getItem('darkMode') === 'true';
+    toggle.checked = isDark;
+    document.body.classList.toggle('dark-mode', isDark);
+
     toggle.addEventListener('change', () => {
-      document.body.classList.toggle('dark-mode');
+      const ativo = toggle.checked;
+      document.body.classList.toggle('dark-mode', ativo);
+      localStorage.setItem('darkMode', ativo);
     });
   }
+}
 
-  // 💬 Efeito Máquina de Escrever
+// 💬 Efeito Máquina de Escrever
+function iniciarTypeWriter() {
   const texto = [
     "Estudante de Análise e Desenvolvimento de Sistemas",
     "Apaixonada por programação 💻",
@@ -18,16 +34,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let j = 0;
   let fraseAtual = "";
   let escrevendo = true;
+  const elemento = document.getElementById("typewriter-text");
+
+  if (!elemento) return;
 
   function typeWriter() {
-    const elemento = document.getElementById("typewriter-text");
-    if (!elemento) return; // segurança caso o elemento não exista ainda
-
     if (i < texto.length) {
       if (escrevendo) {
         if (j < texto[i].length) {
           fraseAtual += texto[i].charAt(j);
-          elemento.innerHTML = fraseAtual + "<span class='cursor'>|</span>";
+          elemento.textContent = fraseAtual;
           j++;
           setTimeout(typeWriter, 60);
         } else {
@@ -37,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         if (j > 0) {
           fraseAtual = fraseAtual.slice(0, -1);
-          elemento.innerHTML = fraseAtual + "<span class='cursor'>|</span>";
+          elemento.textContent = fraseAtual;
           j--;
           setTimeout(typeWriter, 30);
         } else {
@@ -50,8 +66,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   typeWriter();
+}
 
-  // 🍔 Menu Hamburguer (mobile)
+// 🍔 Menu Hamburguer (mobile)
+function iniciarMenuHamburguer() {
   const menuToggle = document.querySelector('.menu-toggle');
   const navUl = document.querySelector('nav ul');
 
@@ -60,19 +78,18 @@ document.addEventListener("DOMContentLoaded", () => {
       navUl.classList.toggle('show');
     });
   }
-});
+}
 
+// 🔍 Ver detalhes (mobile)
+function configurarDetalhes() {
+  document.querySelectorAll('.btn-detalhes').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const detalhes = btn.nextElementSibling;
+      if (!detalhes) return;
 
-  // 🍔 Ver detalhes (mobile)
-document.querySelectorAll('.btn-detalhes').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const detalhes = btn.previousElementSibling; // pega o elemento antes do botão (a div detalhes)
-    if (detalhes.style.display === 'block') {
-      detalhes.style.display = 'none';
-      btn.textContent = 'Ver detalhes';
-    } else {
-      detalhes.style.display = 'block';
-      btn.textContent = 'Fechar detalhes';
-    }
+      const visivel = detalhes.style.display === 'block';
+      detalhes.style.display = visivel ? 'none' : 'block';
+      btn.textContent = visivel ? 'Ver detalhes' : 'Fechar detalhes';
+    });
   });
-});
+}
