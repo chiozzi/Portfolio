@@ -2,10 +2,11 @@
 @media (max-width: 768px) {
   /* NAV BAR */
   nav {
+    position: relative; /* para o absolute do botão se basear aqui */
     height: 60px;
     padding: 0 10px;
   }
-  
+
   .leticiacode-logo {
     font-size: 25px;
     margin-left: 10px;
@@ -31,7 +32,7 @@
   .intro {
     flex-direction: column;
     height: auto;
-    padding: 20px 10px;
+    padding: 80px 10px 20px; /* Aumentei padding-top para não ficar atrás da navbar fixa */
     text-align: center;
   }
 
@@ -68,6 +69,14 @@
     padding: 20px;
   }
 
+  /* Mostrar detalhes e esconder botão em tablets */
+  .detalhes-projeto {
+    display: block !important;
+  }
+  .btn-detalhes {
+    display: none !important;
+  }
+
   /* SESSÃO CONTATO */
   .contato {
     margin: 20px 10px;
@@ -97,11 +106,44 @@
 
 /* Para celulares (até 480px) */
 @media (max-width: 480px) {
+  /* Esconder menu padrão */
   nav ul {
-    display: none; /* Esconder o menu no mobile, por exemplo, para usar um menu hamburguer */
+    display: none;
+    position: fixed;
+    top: 80px; /* altura da navbar fixa */
+    right: 0;
+    background-color: #66056d;
+    width: 200px;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 0 0 0 10px;
+    box-shadow: -2px 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
   }
 
-  /* Para logo e navbar */
+  /* Mostrar menu quando ativo */
+  nav ul.show {
+    display: flex;
+  }
+
+  /* Botão hamburguer */
+  .menu-toggle {
+    position: absolute;
+    top: 25px;
+    right: 60px; /* distancia da borda direita */
+    background: red; /* para visualizar o botão */
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .leticiacode-logo {
     font-size: 20px;
     margin-left: 10px;
@@ -110,6 +152,21 @@
   .leticiacode-logo img {
     width: 25px;
     height: 25px;
+  }
+
+  nav ul li {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+
+  nav ul li:hover {
+    background-color: #b866be;
+  }
+
+  .intro {
+    padding: 80px 10px 20px; /* para não ficar coberto pela navbar fixa */
+    text-align: center;
   }
 
   .intro-content h1 {
@@ -124,7 +181,7 @@
     font-size: 16px;
   }
 
-  /* Ajustar sobre e habilidades */
+  /* Ajustar títulos */
   .sobre-content h1,
   .habilidades-content h1,
   .projetos-content h1,
@@ -136,5 +193,37 @@
   .projetos-box-content {
     width: 100%;
     padding: 15px;
+  }
+
+  /* Detalhes inicialmente escondidos no celular */
+  .detalhes-projeto {
+    display: none;
+    margin-top: 15px;
+    color: white;
+    font-size: 16px;
+  }
+
+  /* Botão para ver detalhes visível só no celular */
+  .btn-detalhes {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #66056d;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+/* Esconder botão detalhes em telas maiores que 480px */
+@media (min-width: 481px) {
+  .btn-detalhes {
+    display: none !important;
+  }
+  .detalhes-projeto {
+    display: block !important;
   }
 }

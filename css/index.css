@@ -94,6 +94,20 @@ nav ul li a {
 
 }
 
+/* Botão hamburguer (base) */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
+  align-self: center;
+  padding: 5px;
+  user-select: none;
+}
+
 
 
 /* BOTÃO MODO ESCURO */
@@ -258,8 +272,8 @@ i {
 
 
 
-/* SESSÃO SOBRE E HABILIDADES */
-.sobre-habilidades {
+/* SESSÃO SOBRE */
+.sobre {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -291,6 +305,18 @@ i {
 }
 
 
+/* SESSÃO HABILIDADES */
+.habilidades-aprendendo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 100px; 
+    padding: 50px; 
+    margin: 50px;
+    border-radius: 10px;
+}
+
 
 /* texto de habilidades */
 .habilidades-content {
@@ -306,6 +332,31 @@ i {
 
 /* container dos icons */
 .habilidades-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px; /* espaço entre as caixinhas */
+}
+
+
+
+
+
+/* texto de aprendendo */
+.aprendendo-content {
+    flex: 1;
+    text-align: center;
+}
+/* titulo de habilidades */
+.aprendendo-content h1 {
+    font-size: 40px;
+    color: #66056d;
+    font-weight: bold;
+}
+
+/* container dos icons */
+.aprendendo-icons {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -367,6 +418,12 @@ i {
 
 
 
+
+
+
+
+
+
 /* SESSÃO PROJETOS */
 .projetos {
     display: flex;
@@ -378,7 +435,6 @@ i {
     background-color: #dbb3df;
     border-radius: 10px;
     flex-wrap: wrap;
-
 }
 
 .projetos-content {
@@ -406,38 +462,46 @@ i {
     align-items: center;
     flex-wrap: wrap;
     gap: 70px; /* espaço entre as caixinhas */
-
 }
+
 /* cada caixinha dos projetos */
 .projetos-box-content {
+    position: relative; /* importante para o efeito hover */
+    overflow: hidden;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 300px;
-    height: 300px;
+    min-height: 300px;
     padding: 30px;
     border: 1px solid #66056d;
     border-radius: 30px;
     background-color: #b866be;
-    min-height: 300px; /* altura mínima para manter o layout */
-    height: auto; /* ajuste automático */
-    margin-bottom: 40px; /* espaço entre as caixinhas */
-
+    margin-bottom: 40px;
+    height: auto;
 }
+
 /* cada imagem dos projetos */
 .projetos-box-content img {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: auto; /* ou ajuste a altura que preferir */
     border-radius: 20px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    object-fit: cover; /* mantém proporção e corta o excesso se necessário */
+    transition: filter 0.3s ease;
+    border: 1px solid #C2B8D9;
 }
+
+
 /* cada titulo dos projetos */
 .projetos-box-content h2 {
     font-size: 20px;
     color: black;
     font-weight: bold;
     margin-bottom: 10px;
+    transition: filter 0.3s ease;
 }
 
 /* texto dos projetos */
@@ -447,24 +511,73 @@ i {
     margin: 0;
     text-align: center;
 }
+
 /* texto das tec dos projetos */
 .tecnologias {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    padding: 15px;
-    height: auto; /* ajuste automático */
-    gap: 5px; /* opcional para espaçamento entre techs */
+    gap: 8px;
+    margin: 15px 0;
+    padding: 0;
+}
+
+/* estilos das tecnologias */
+.tec {
+    background: #ff6f91;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    color: white;
 }
 
 /* botão de ver projeto */
 .projetos-box-content a {
-    text-decoration: none;
     background-color: #66056d;
     border-radius: 15px;
     padding: 15px;
     color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.projetos-box-content a:hover {
+    background-color: #b866be;
+}
+
+/* camada detalhes escondida inicialmente */
+.projetos-box-content .detalhes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(102, 5, 109, 0.9);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 30px;
+}
+
+/* mostrar detalhes ao passar o mouse */
+.projetos-box-content:hover .detalhes {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* escurecer img e título ao mostrar detalhes */
+.projetos-box-content:hover img,
+.projetos-box-content:hover h2 {
+    filter: brightness(30%);
 }
 
 
