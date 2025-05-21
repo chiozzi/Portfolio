@@ -81,15 +81,20 @@ function iniciarMenuHamburguer() {
 }
 
 // 🔍 Ver detalhes (mobile)
-function configurarDetalhes() {
-  document.querySelectorAll('.btn-detalhes').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const detalhes = btn.nextElementSibling;
-      if (!detalhes) return;
+document.querySelectorAll('.btn-detalhes').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const detalhes = btn.nextElementSibling;
 
-      const visivel = detalhes.style.display === 'block';
-      detalhes.style.display = visivel ? 'none' : 'block';
-      btn.textContent = visivel ? 'Ver detalhes' : 'Fechar detalhes';
-    });
+    if (!detalhes) return;
+
+    const estaVisivel = detalhes.style.display === 'block';
+
+    if (estaVisivel) {
+      detalhes.style.display = 'none';
+      btn.textContent = 'Ver detalhes';
+    } else {
+      detalhes.style.display = 'block';
+      btn.textContent = 'Fechar detalhes';
+    }
   });
-}
+});

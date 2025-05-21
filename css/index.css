@@ -472,12 +472,13 @@ i {
     background-color: #b866be;
     margin-bottom: 40px;
     height: auto;
+    width: 400px;
 }
 
 /* cada imagem dos projetos */
 .projetos-box-content img {
-    width: 100%;
-    height: auto; /* ou ajuste a altura que preferir */
+    width: 400px;
+    height: 300px; /* ou ajuste a altura que preferir */
     border-radius: 20px;
     margin-bottom: 15px;
     object-fit: cover; /* mantém proporção e corta o excesso se necessário */
@@ -535,7 +536,7 @@ i {
 }
 
 .projetos-box-content a:hover {
-    background-color: #b866be;
+    background-color: #300033;
 }
 
 /* camada detalhes escondida inicialmente */
@@ -545,7 +546,7 @@ i {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(102, 5, 109, 0.9);
+    background: rgba(158, 57, 165, 0.9);
     color: white;
     padding: 20px;
     box-sizing: border-box;
@@ -571,6 +572,14 @@ i {
     filter: brightness(30%);
 }
 
+.detalhes {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.detalhes.ativo {
+  display: block;
+}
 
 
 
