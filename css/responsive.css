@@ -177,9 +177,3 @@
   }
 }
 
-/* Esconde o botão "Ver detalhes" no desktop */
-@media screen and (min-width: 1024px) {
-  .btn-detalhes {
-    display: none;
-  }
-}

@@ -1,7 +1,17 @@
+
+:root {
+  --purple-dark: #4b136d;
+  --purple-medium: #66056d;
+  --purple-light: #a86cd8;
+  --purple-bg: #f5e8ff;
+  --text-dark: #2b1a40;
+  --text-light: #fff;
+  --shadow-soft: rgba(102, 5, 109, 0.3);
+}
+
 html {
     scroll-behavior: smooth;
 }
-
 
 body {
     font-family: Comfortaa, sans-serif;
@@ -26,87 +36,98 @@ nav {
     z-index: 10;
     align-items: center;
     height: 80px;
-    
+    padding: 0 30px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* sombra suave */
+    transition: background-color 0.3s ease;
 }
-
 
 /* logo da nav */
 .leticiacode-logo {
-    display: flex;            /* Alinha elementos lado a lado */
-    align-items: center;      /* Alinha verticalmente */
-    font-size: 35px;
-    font-weight: bold;
-    color: white;
-    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: #fff;
+    margin-left: 10px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    text-shadow: 0 0 5px #d3a1d3;
 }
 
 /* texto da logo da nav */
 .leticiacode-logo p {
-    font-size: 30px;
+    font-size: 32px;
     color: white;
-    margin: 0;                /* Remove margem padrão para melhor alinhamento */
+    margin: 0;
+    font-weight: 700;
 }
-
-
 
 /* links da nav */
 nav ul {
     margin: 0;
-    padding: 0 30px 0 0; /* um padding à direita para não grudar na borda */
+    padding: 0;
     display: flex;
     list-style: none;
-    gap: 30px; /* espaçamento entre os itens */
+    gap: 32px;
     align-items: center;
-    flex-grow: 1;            /* faz o ul crescer para ocupar espaço */
-    justify-content: flex-end; /* alinha os itens do ul para a direita */
+    flex-grow: 1;
+    justify-content: flex-end;
 }
-
 
 /* cada item da nav */
 nav ul li {
-    padding: 10px 20px;
-    border-radius: 10px;
-    transition: background 0.3s;
+    padding: 12px 22px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-
-
- /* quando passar o mouse em cima do item */
+/* hover item nav */
 nav ul li:hover {
     background-color: #b866be;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(184, 102, 190, 0.4);
 }
 
-/* cada texto dos links */
-nav ul li a { 
+/* texto dos links */
+nav ul li a {
     text-decoration: underline;
     color: white;
-    font-weight: bold;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
 
+nav ul li a:hover {
+    color: #ffe6ff;
 }
 
 /* Botão hamburguer (base) */
 .menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  margin-left: 20px;
-  align-self: center;
-  padding: 5px;
-  user-select: none;
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    align-self: center;
+    padding: 5px;
+    user-select: none;
+    transition: color 0.3s ease;
 }
 
-
+.menu-toggle:hover {
+    color: #f0f0f0;
+}
 
 /* BOTÃO MODO ESCURO */
 #toggle-dark-mode {
-    position: static; /* ou remova */
+    position: static;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     cursor: pointer;
     color: white;
     transition: color 0.3s ease;
@@ -141,9 +162,10 @@ body.dark-mode #toggle-dark-mode {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 8px;
+    padding: 0 10px;
     box-sizing: border-box;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
 /* Ícones */
@@ -152,8 +174,8 @@ body.dark-mode #toggle-dark-mode {
     user-select: none;
     pointer-events: none;
     color: #555;
-    transition: color 0.3s;
-    margin: -3px;
+    transition: color 0.3s ease;
+    margin: 0 -3px;
 }
 
 /* Bola do toggle */
@@ -165,8 +187,8 @@ body.dark-mode #toggle-dark-mode {
     height: 24px;
     background-color: white;
     border-radius: 50%;
-    transition: transform 0.3s;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
 /* Estado ativo: checkbox marcado */
@@ -198,9 +220,10 @@ body.dark-mode #toggle-dark-mode {
     align-items: center;
     padding: 20px;
     background-color: #66056d;
-    border-radius: 10px;
+    border-radius: 12px;
     flex-wrap: wrap;
     height: 600px;
+    box-shadow: 0 8px 20px rgba(102, 5, 109, 0.6);
 }
 
 /* texto da sessão intro */
@@ -211,32 +234,40 @@ body.dark-mode #toggle-dark-mode {
 
 /*titulo da sessão intro */
 .intro-content h1 {
-    font-size: 40px;
+    font-size: 48px;
     color: #dbb3df;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 8px #a351a2;
+      text-transform: uppercase;
+
 }
 
 /* texto da sessão intro */
 .intro-content p {
-    font-size: 20px;
+    font-size: 22x;
     color: white;
-    
 }
 
 /* botão da sessão intro */
 .btn {
     text-decoration: underline;
     color: #dbb3df;
-    font-weight: bold;
-    padding: 10px;
-    border-radius: 10px;
-    transition: background 0.3s;
-    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 22px;
+    display: inline-block;
+    margin-top: 25px;
+    box-shadow: 0 2px 6px rgba(184, 102, 190, 0.4);
 }
 
-.btn:hover { /* quando passar o mouse em cima do item */
-    background-color: #b866be;
+
+.btn:hover {
+    background-color: #a351a2;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(184, 102, 190, 0.6);
 }
 
 /* ícone so mouse */
@@ -244,24 +275,26 @@ i {
     margin-left: 7px;
 }
 
-
-
 /* imagem da sessão intro */
 .img-intro-content {
     flex: 1;
     display: flex;
     justify-content: center;
+    
 }
 
 /* realmente a imagem da sessão intro */
 .img-intro {
-    width: 250px;
-    border: 2px solid #dbb3df;
+    width: 280px;
+    border: 3px solid #dbb3df;
     border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(219, 179, 223, 0.7);
+    transition: transform 0.4s ease;
 }
 
-
-
+.img-intro:hover {
+    transform: scale(1.08);
+}
 
 /* SESSÃO SOBRE */
 .sobre {
@@ -273,6 +306,8 @@ i {
     padding: 50px; 
     margin: 50px;
     border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(102, 5, 109, 0.15);
 }
 
 
@@ -286,10 +321,12 @@ i {
     font-size: 40px;
     color: #66056d;
     font-weight: bold;
+      text-transform: uppercase;
+
 }
 /* texto de sobre */
 .sobre-content p {
-    font-size: 18px;
+    font-size: 20px;
     color: black;
     margin-bottom: 20px;
     line-height: 1.5; /* Aumenta o espaçamento entre linhas */
@@ -298,121 +335,78 @@ i {
 
 /* SESSÃO HABILIDADES */
 .habilidades-aprendendo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 100px; 
-    padding: 50px; 
-    margin: 50px;
-    border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px var(--shadow-soft);
 }
 
-
-/* texto de habilidades */
-.habilidades-content {
-    flex: 1;
-    text-align: center;
-}
-/* titulo de habilidades */
-.habilidades-content h1 {
-    font-size: 40px;
-    color: #66056d;
-    font-weight: bold;
-}
-
-/* container dos icons */
-.habilidades-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px; /* espaço entre as caixinhas */
-}
-
-
-
-
-
-/* texto de aprendendo */
+.habilidades-content,
 .aprendendo-content {
-    flex: 1;
-    text-align: center;
+  flex: 1 1 300px;
+  text-align: center;
 }
-/* titulo de habilidades */
+
+
+.habilidades-content h1,
 .aprendendo-content h1 {
-    font-size: 40px;
-    color: #66056d;
-    font-weight: bold;
+  font-size: 40px;
+  font-weight: bold;
+  color: #66056d;
+    text-transform: uppercase;
+
 }
 
-/* container dos icons */
+.habilidades-icons,
 .aprendendo-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px; /* espaço entre as caixinhas */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 
-/* cada caixinha dos icons */
 .icone-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 120px;
-    height: 120px;
-    padding: 15px;
-    border: 1px solid #b866be;
-    border-radius: 3px;
-    background-color: #dbb3df;
-   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  padding: 15px;
+  border-radius: 20px;
+  background: #a351a2;
+  box-shadow: 0 5px 15px rgba(102, 5, 109, 0.4);
+  color: var(--text-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
 }
 
-/* cada icone */
+.icone-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(102, 5, 109, 0.6);
+}
+
 .icone-box i {
     font-size: 40px;
-    color: #66056d;
     margin-bottom: 10px;
-    line-height: 1; /* Alinha o icone no centro */
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
     margin: 0;
     padding: 0;
     display: block;
+
 }
 
-/* texto de cada icone */
 .icone-box p {
-    font-size: 16px;
-    color: black;
-    font-weight: bold;
-    margin: 0;
-    line-height: 1; /* Alinha o texto no centro */
-    margin: 0;
-    padding: 0;
-    display: block;
-    margin-top: 15px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--text-light);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* SESSÃO PROJETOS */
@@ -421,16 +415,19 @@ i {
     flex-direction: column; /* Alinha os itens (h1 e p) em coluna, com o título em cima */
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 50px auto;
     padding: 20px;
     background-color: #dbb3df;
     border-radius: 10px;
     flex-wrap: wrap;
+    box-shadow: 0 8px 24px rgba(102, 5, 109, 0.5);
+
 }
 
 .projetos-content {
     flex: 1;
     text-align: center;
+
 }
 /* titulo da sessão projetos */
 .projetos-content h1 {
@@ -438,51 +435,55 @@ i {
     color: #66056d;
     font-weight: bold;
     margin-bottom: 20px;
+    text-transform: uppercase;
+
 }
 /* texto da sessão projetos */
 .projetos-content p {
     font-size: 18px;
     color: black;
     margin-bottom: 30px;
+
 }
 
 /* container dos projetos */
 .projetos-box {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    gap: 70px; /* espaço entre as caixinhas */
+    gap: 28px; /* espaço entre as caixinhas */
 }
 
-/* cada caixinha dos projetos */
+/* cada card dos projetos */
 .projetos-box-content {
-    position: relative; /* importante para o efeito hover */
-    overflow: hidden;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    min-height: 300px;
-    padding: 30px;
-    border: 1px solid #66056d;
-    border-radius: 30px;
-    background-color: #b866be;
-    margin-bottom: 40px;
-    height: auto;
-    width: 400px;
+  position: relative;
+  width: 320px;
+  height: 270px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 6px 16px rgba(102, 5, 109, 0.3);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    
+.projetos-box-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 30px rgba(102, 5, 109, 0.6);
+
 }
 
 /* cada imagem dos projetos */
 .projetos-box-content img {
-    width: 400px;
-    height: 300px; /* ou ajuste a altura que preferir */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     border-radius: 20px;
-    margin-bottom: 15px;
-    object-fit: cover; /* mantém proporção e corta o excesso se necessário */
-    transition: filter 0.3s ease;
     border: 1px solid #C2B8D9;
 }
 
@@ -490,10 +491,14 @@ i {
 /* cada titulo dos projetos */
 .projetos-box-content h2 {
     font-size: 20px;
-    color: black;
+    color: #300033;
     font-weight: bold;
     margin-bottom: 10px;
-    transition: filter 0.3s ease;
+    transition: color 0.3s ease;
+
+}
+.projetos-box-content:hover h2 {
+  color: #66056d;
 }
 
 /* texto dos projetos */
@@ -557,7 +562,7 @@ i {
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 /* mostrar detalhes ao passar o mouse */
@@ -577,16 +582,110 @@ i {
   transition: all 0.3s ease;
 }
 
-.detalhes.ativo {
+.detalhes-projeto.ativo {
   display: block;
 }
 
+.btn-detalhes {
+    display: none;
+}
 
 
+/* SEÇÃO SERVIÇOS + FORMULÁRIO */
+.servicos-form {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.servicos-form .servicos, 
+.servicos-form .formulario {
+  flex: 1 1 450px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px var(--shadow-soft);
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.servicos-form .servicos h1,
+.servicos-form .form-card h1 {
+    font-size: 40px;
+    color: #66056d;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+.servicos-form .servicos ul {
+    list-style: none;
+    padding: 0;
+} 
+
+.servicos-form .servicos ul li {
+    list-style: none;
+    background: var(--purple-bg);
+  border-radius: 15px;
+  margin: 15px 0;
+  padding: 18px;
+  font-weight: bold;
+  color: var(--purple-dark);
+  box-shadow: inset 0 0 10px #d6b5f7;
+  transition: background 0.3s ease;
+
+}
 
 
+.servicos-form .servicos ul li:hover {
+  background: var(--purple-light);
+  color: white;
+}
+
+.servicos-form .form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
 
+.servicos-form .form-card input,
+.servicos-form .form-card textarea {
+  padding: 18px 20px;
+  font-size: 1rem;
+  border: 2px solid var(--purple-light);
+  border-radius: 15px;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.servicos-form .form-card input:focus,
+.servicos-form .form-card textarea:focus {
+  border-color: var(--purple-medium);
+  outline: none;
+  box-shadow: 0 0 8px var(--purple-medium);
+}
+
+.servicos-form .form-card button {
+  background: linear-gradient(45deg, var(--purple-medium), var(--purple-dark));
+  color: white;
+  padding: 18px 0;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px var(--shadow-soft);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicos-form .form-card button:hover {
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
+  box-shadow: 0 12px 30px var(--shadow-soft);
+}
 
 
 
@@ -597,9 +696,16 @@ i {
     flex-direction: column; /* Alinha os itens (h1 e p) em coluna, com o título em cima */
     justify-content: center;
     align-items: center;
-    margin: 50px;
     padding: 20px;
     flex-wrap: wrap;
+    background-color: #66056d;
+    border-radius: 20px;
+    max-width: 1100px;
+    margin: 60px auto 100px;
+    box-shadow: 0 8px 20px rgba(102, 5, 109, 0.6);
+    color: white;
+    text-align: center;
+
 }
 
 .contato-content {
@@ -609,9 +715,11 @@ i {
 /* titulo da sessão contato */
 .contato-content h1 {
     font-size: 40px;
-    color: #66056d;
+    color: white;
     font-weight: bold;
     margin-bottom: 20px;
+      text-transform: uppercase;
+
 }
 /* box da sessão contato */
 .contato-box {
@@ -632,7 +740,7 @@ i {
 .contato-box-content button {
     width: 70px;
     height: 70px;
-    background-color: #66056d;
+    background-color: #a351a2;
     color: white;
     font-size: 30px;
     border: none;
@@ -666,23 +774,6 @@ i {
     outline: none;
     box-shadow: none; /* caso algum shadow cause essa linha */
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* FOOTER */
 footer {

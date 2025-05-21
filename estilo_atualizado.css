@@ -1,0 +1,364 @@
+
+:root {
+  --purple-dark: #4b136d;
+  --purple-medium: #66056d;
+  --purple-light: #a86cd8;
+  --purple-bg: #f5e8ff;
+  --text-dark: #2b1a40;
+  --text-light: #fff;
+  --shadow-soft: rgba(102, 5, 109, 0.3);
+}
+
+body {
+  font-family: 'Comfortaa', cursive, sans-serif;
+  background-color: var(--purple-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* SESSÃO HABILIDADES */
+.habilidades-aprendendo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 40px 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px var(--shadow-soft);
+}
+
+.habilidades-content,
+.aprendendo-content {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.habilidades-content h1,
+.aprendendo-content h1 {
+  font-size: 2.5rem;
+  color: var(--purple-dark);
+  font-weight: 900;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.habilidades-icons,
+.aprendendo-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.icone-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--purple-light), var(--purple-medium));
+  box-shadow: 0 5px 15px rgba(102, 5, 109, 0.4);
+  color: var(--text-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.icone-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(102, 5, 109, 0.6);
+}
+
+.icone-box i {
+  font-size: 48px;
+  margin-bottom: 15px;
+  filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
+}
+
+.icone-box p {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-light);
+}
+
+/* SESSÃO PROJETOS */
+.projetos {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background: var(--purple-bg);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px var(--shadow-soft);
+  text-align: center;
+}
+
+.projetos-content h1 {
+  font-size: 3rem;
+  color: var(--purple-dark);
+  font-weight: 900;
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.projetos-content p {
+  font-size: 1.2rem;
+  color: var(--purple-medium);
+  margin-bottom: 50px;
+}
+
+.projetos-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.projetos-box-content {
+  position: relative;
+  overflow: hidden;
+  width: 350px;
+  border-radius: 30px;
+  background: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.projetos-box-content:hover {
+  box-shadow: 0 20px 40px rgba(102, 5, 109, 0.4);
+}
+
+.projetos-box-content img {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  transition: filter 0.3s ease;
+}
+
+.projetos-box-content:hover img {
+  filter: brightness(0.6);
+}
+
+.projetos-box-content h2 {
+  font-size: 1.5rem;
+  color: var(--purple-dark);
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.projetos-box-content:hover h2 {
+  color: var(--purple-medium);
+}
+
+.projetos-box-content p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.tecnologias {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tec {
+  background: var(--purple-medium);
+  color: white;
+  padding: 7px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(102, 5, 109, 0.4);
+  user-select: none;
+}
+
+.projetos-box-content a {
+  background: linear-gradient(45deg, var(--purple-medium), var(--purple-dark));
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(102, 5, 109, 0.3);
+}
+
+.projetos-box-content a:hover {
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
+  box-shadow: 0 8px 20px rgba(102, 5, 109, 0.5);
+}
+
+/* SERVIÇOS + FORMULÁRIO */
+.servicos-form {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.servicos-form .servicos, 
+.servicos-form .formulario {
+  flex: 1 1 450px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px var(--shadow-soft);
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.servicos-form .servicos h1,
+.servicos-form .form-card h1 {
+  font-size: 2.3rem;
+  color: var(--purple-dark);
+  font-weight: 900;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.servicos-form .servicos ul li {
+  background: var(--purple-bg);
+  border-radius: 15px;
+  margin: 15px 0;
+  padding: 18px;
+  font-weight: 700;
+  color: var(--purple-dark);
+  box-shadow: inset 0 0 10px #d6b5f7;
+  transition: background 0.3s ease;
+}
+
+.servicos-form .servicos ul li:hover {
+  background: var(--purple-light);
+  color: white;
+}
+
+.servicos-form .form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.servicos-form .form-card input,
+.servicos-form .form-card textarea {
+  padding: 18px 20px;
+  font-size: 1rem;
+  border: 2px solid var(--purple-light);
+  border-radius: 15px;
+  background: #fff;
+  transition: border-color 0.3s ease;
+}
+
+.servicos-form .form-card input:focus,
+.servicos-form .form-card textarea:focus {
+  border-color: var(--purple-medium);
+  outline: none;
+  box-shadow: 0 0 8px var(--purple-medium);
+}
+
+.servicos-form .form-card button {
+  background: linear-gradient(45deg, var(--purple-medium), var(--purple-dark));
+  color: white;
+  padding: 18px 0;
+  font-size: 1.2rem;
+  font-weight: 900;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px var(--shadow-soft);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicos-form .form-card button:hover {
+  background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
+  box-shadow: 0 12px 30px var(--shadow-soft);
+}
+
+/* CONTATO */
+.contato {
+  max-width: 1200px;
+  margin: 60px auto 80px auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: var(--purple-dark);
+}
+
+.contato-content h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contato-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.contato-box-content {
+  width: 110px;
+  height: 110px;
+}
+
+.contato-box-content button {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--purple-medium), var(--purple-dark));
+  border-radius: 25px;
+  border: none;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px var(--shadow-soft);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contato-box-content button:hover {
+  background: linear-gradient(225deg, var(--purple-dark), var(--purple-medium));
+  box-shadow: 0 12px 30px var(--shadow-soft);
+}
+
+.contato-box-content button i {
+  line-height: 1;
+}
+
+/* FOOTER */
+footer {
+  background: var(--purple-medium);
+  color: var(--text-light);
+  text-align: center;
+  padding: 15px 0;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 -5px 20px var(--shadow-soft);
+  user-select: none;
+  margin-top: 50px;
+}

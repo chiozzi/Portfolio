@@ -1,0 +1,625 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Comfortaa', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;    
+    transition: background-color 0.5s ease, color 0.5s ease;
+    color: #333;
+}
+
+/* NAV BAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #66056d;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10;
+    align-items: center;
+    height: 80px;
+    padding: 0 30px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* sombra suave */
+    transition: background-color 0.3s ease;
+}
+
+/* logo da nav */
+.leticiacode-logo {
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 900;
+    color: #fff;
+    margin-left: 10px;
+    letter-spacing: 1.5px;
+    user-select: none;
+    text-shadow: 0 0 5px #d3a1d3;
+}
+
+/* texto da logo da nav */
+.leticiacode-logo p {
+    font-size: 32px;
+    color: white;
+    margin: 0;
+    font-weight: 700;
+}
+
+/* links da nav */
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+/* cada item da nav */
+nav ul li {
+    padding: 12px 22px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* hover item nav */
+nav ul li:hover {
+    background-color: #b866be;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(184, 102, 190, 0.4);
+}
+
+/* texto dos links */
+nav ul li a {
+    text-decoration: underline;
+    color: white;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffe6ff;
+}
+
+/* Botão hamburguer (base) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-left: 20px;
+    align-self: center;
+    padding: 5px;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: #f0f0f0;
+}
+
+/* BOTÃO MODO ESCURO */
+#toggle-dark-mode {
+    position: static;
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: white;
+    transition: color 0.3s ease;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+body.dark-mode #toggle-dark-mode {
+    color: #f0f0f0;
+}
+
+/* Container do toggle */
+.dark-mode-toggle {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/* Esconde o checkbox */
+.dark-mode-toggle input {
+    display: none;
+}
+
+/* Estilo do "slider" (label) */
+.dark-mode-toggle label {
+    cursor: pointer;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Ícones */
+.dark-mode-toggle .icon {
+    font-size: 18px;
+    user-select: none;
+    pointer-events: none;
+    color: #555;
+    transition: color 0.3s ease;
+    margin: 0 -3px;
+}
+
+/* Bola do toggle */
+.dark-mode-toggle .toggle-ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Estado ativo: checkbox marcado */
+.dark-mode-toggle input:checked + label {
+    background-color: #66056d;
+    color: #f0f0f0;
+}
+
+/* Move a bolinha */
+.dark-mode-toggle input:checked + label .toggle-ball {
+    transform: translateX(30px);
+}
+
+/* Cores dos ícones conforme estado */
+.dark-mode-toggle input:checked + label .moon {
+    color: #f0f0f0;
+}
+
+.dark-mode-toggle input:not(:checked) + label .sun {
+    color: #999;
+}
+
+/* SESSÃO INTRO */
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px;
+    background-color: #66056d;
+    border-radius: 12px;
+    flex-wrap: wrap;
+    height: 600px;
+    box-shadow: 0 8px 20px rgba(102, 5, 109, 0.6);
+}
+
+/* texto da sessão intro */
+.intro-content {
+    flex: 1;
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+/*titulo da sessão intro */
+.intro-content h1 {
+    font-size: 48px;
+    color: #dbb3df;
+    font-weight: 900;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 8px #a351a2;
+}
+
+/* texto da sessão intro */
+.intro-content p {
+    font-size: 22px;
+    color: white;
+    line-height: 1.6;
+}
+
+/* botão da sessão intro */
+.btn {
+    text-decoration: underline;
+    color: #dbb3df;
+    font-weight: 700;
+    padding: 12px 25px;
+    border-radius: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 22px;
+    display: inline-block;
+    margin-top: 25px;
+    box-shadow: 0 2px 6px rgba(184, 102, 190, 0.4);
+}
+
+.btn:hover {
+    background-color: #b866be;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(184, 102, 190, 0.6);
+}
+
+/* ícone do mouse */
+i {
+    margin-left: 8px;
+}
+
+/* imagem da sessão intro */
+.img-intro-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    max-width: 350px;
+}
+
+/* realmente a imagem da sessão intro */
+.img-intro {
+    width: 280px;
+    border: 3px solid #dbb3df;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(219, 179, 223, 0.7);
+    transition: transform 0.4s ease;
+}
+
+.img-intro:hover {
+    transform: scale(1.08);
+}
+
+/* SESSÃO SOBRE */
+.sobre {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 60px 40px;
+    margin: 50px auto;
+    border-radius: 14px;
+    max-width: 1100px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(102, 5, 109, 0.15);
+}
+
+/* texto de sobre */
+.sobre-content {
+    flex: 1;
+    text-align: center;
+    max-width: 600px;
+}
+
+/* titulo de sobre */
+.sobre-content h1 {
+    font-size: 42px;
+    color: #66056d;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+/* texto de sobre */
+.sobre-content p {
+    font-size: 19px;
+    color: #222;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+}
+
+/* SESSÃO HABILIDADES */
+.habilidades-aprendendo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 50px 40px;
+    margin: 50px auto;
+    border-radius: 14px;
+    max-width: 1100px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(102, 5, 109, 0.15);
+}
+
+/* texto de habilidades */
+.habilidades-content,
+.aprendendo-content {
+    flex: 1;
+    text-align: center;
+    max-width: 450px;
+}
+
+/* titulo de habilidades */
+.habilidades-content h1,
+.aprendendo-content h1 {
+    font-size: 42px;
+    color: #66056d;
+    font-weight: 900;
+    margin-bottom: 30px;
+}
+
+/* container dos icons */
+.habilidades-icons,
+.aprendendo-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+/* cada caixinha dos icons */
+.icone-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    padding: 20px;
+    border: 2px solid #b866be;
+    border-radius: 10px;
+    background-color: #e8cee7;
+    box-shadow: 0 4px 8px rgba(184, 102, 190, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+
+.icone-box:hover {
+    background-color: #b866be;
+    color: white;
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(184, 102, 190, 0.6);
+}
+
+/* cada icone */
+.icone-box i {
+    font-size: 48px;
+    color: #66056d;
+    margin-bottom: 14px;
+    transition: color 0.3s ease;
+}
+
+.icone-box:hover i {
+    color: white;
+}
+
+/* texto de cada icone */
+.icone-box p {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.1;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.icone-box:hover p {
+    color: white;
+}
+
+/* SESSÃO PROJETOS */
+.projetos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+    padding: 30px 20px;
+    background-color: #dbb3df;
+    border-radius: 12px;
+    max-width: 1100px;
+    box-shadow: 0 8px 24px rgba(102, 5, 109, 0.5);
+}
+
+/* titulo dos projetos */
+.projetos h1 {
+    font-size: 44px;
+    color: #66056d;
+    font-weight: 900;
+    margin-bottom: 40px;
+    text-align: center;
+    text-shadow: 1px 1px 5px #a351a2;
+}
+
+/* container dos cards de projetos */
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 28px;
+}
+
+/* cada card */
+.card-projeto {
+    position: relative;
+    width: 300px;
+    height: 270px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(102, 5, 109, 0.3);
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* hover card */
+.card-projeto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 14px 30px rgba(102, 5, 109, 0.6);
+}
+
+/* imagem do projeto */
+.card-projeto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* descrição do projeto (overlay) */
+.card-projeto .descricao {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(102, 5, 109, 0.9), transparent);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 0 0 20px 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-projeto:hover .descricao {
+    opacity: 1;
+}
+
+/* SESSÃO CONTATO */
+.contato {
+    padding: 40px 30px;
+    background-color: #66056d;
+    border-radius: 12px;
+    max-width: 1100px;
+    margin: 60px auto 100px;
+    box-shadow: 0 8px 20px rgba(102, 5, 109, 0.6);
+    color: white;
+    text-align: center;
+}
+
+/* titulo do contato */
+.contato h1 {
+    font-size: 44px;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+/* texto do contato */
+.contato p {
+    font-size: 22px;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* botão contato */
+.contato .btn {
+    color: white;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.contato .btn:hover {
+    background-color: #dbb3df;
+    color: #66056d;
+    transform: scale(1.05);
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #66056d;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* RESPONSIVO */
+
+/* Nav responsivo: hamburger menu aparece até 920px */
+@media (max-width: 920px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #66056d;
+        position: fixed;
+        top: 80px;
+        right: 0;
+        width: 240px;
+        height: calc(100vh - 80px);
+        padding-top: 40px;
+        gap: 18px;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+        border-radius: 0 0 0 12px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Intro responsivo */
+@media (max-width: 820px) {
+    .intro {
+        flex-direction: column;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .intro-content {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .img-intro-content {
+        max-width: 250px;
+    }
+
+    .img-intro {
+        width: 220px;
+    }
+}
+
+/* Sobre e habilidades responsivo */
+@media (max-width: 780px) {
+    .sobre,
+    .habilidades-aprendendo {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .sobre-content,
+    .habilidades-content,
+    .aprendendo-content {
+        max-width: 100%;
+    }
+}
+
+/* Projetos responsivo */
+@media (max-width: 650px) {
+    .projetos-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .card-projeto {
+        width: 100%;
+        height: 240px;
+    }
+}
