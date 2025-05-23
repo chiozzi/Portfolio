@@ -103,27 +103,12 @@ nav ul li a:hover {
     color: #ffe6ff;
 }
 
-/* Botão hamburguer (base) */
 .menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    margin-left: 20px;
-    align-self: center;
-    padding: 5px;
-    user-select: none;
-    transition: color 0.3s ease;
-}
-
-.menu-toggle:hover {
-    color: #f0f0f0;
-}
+  display: none; /* só aparece no responsivo */
+}       
 
 /* BOTÃO MODO ESCURO */
-#toggle-dark-mode {
+.dark-mode-toggle {
     position: static;
     background: none;
     border: none;
@@ -132,19 +117,13 @@ nav ul li a:hover {
     color: white;
     transition: color 0.3s ease;
     margin-left: 20px;
-    margin-right: 20px;
+    margin-right: 55px;
 }
 
 body.dark-mode #toggle-dark-mode {
     color: #f0f0f0;
 }
 
-/* Container do toggle */
-.dark-mode-toggle {
-    margin-right: 30px;
-    display: flex;
-    align-items: center;
-}
 
 /* Esconde o checkbox */
 .dark-mode-toggle input {
@@ -407,144 +386,96 @@ i {
   color: var(--text-light);
 }
 
-
 /* SESSÃO PROJETOS */
 .projetos {
     display: flex;
-    flex-direction: column; /* Alinha os itens (h1 e p) em coluna, com o título em cima */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 50px auto;
     padding: 20px;
-    background-color: #dbb3df;
+    background-color: #510357;
     border-radius: 10px;
-    flex-wrap: wrap;
     box-shadow: 0 8px 24px rgba(102, 5, 109, 0.5);
-
+    width: 85%;
 }
 
 .projetos-content {
-    flex: 1;
     text-align: center;
-
 }
-/* titulo da sessão projetos */
+
 .projetos-content h1 {
     font-size: 40px;
-    color: #66056d;
+    color: white;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
-
 }
-/* texto da sessão projetos */
+
 .projetos-content p {
     font-size: 18px;
-    color: black;
+    color: white;
     margin-bottom: 30px;
-
 }
 
-/* container dos projetos */
+/* Container dos cards de projetos */
 .projetos-box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 28px; /* espaço entre as caixinhas */
+    gap: 28px;
 }
 
-/* cada card dos projetos */
+/* Card individual */
 .projetos-box-content {
-  position: relative;
-  width: 320px;
-  height: 270px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 6px 16px rgba(102, 5, 109, 0.3);
-  overflow: hidden;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    width: 400px;
+     min-height: 300px;
+    height: auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(102, 5, 109, 0.3);
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-    
+
 .projetos-box-content:hover {
     transform: scale(1.05);
     box-shadow: 0 14px 30px rgba(102, 5, 109, 0.6);
-
 }
 
-/* cada imagem dos projetos */
+/* Imagem do projeto */
 .projetos-box-content img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
     border: 1px solid #C2B8D9;
+    transition: filter 0.3s ease;
 }
 
-
-/* cada titulo dos projetos */
+/* Título do projeto */
 .projetos-box-content h2 {
-    font-size: 20px;
+    font-size: 25px;
     color: #300033;
     font-weight: bold;
     margin-bottom: 10px;
     transition: color 0.3s ease;
-
 }
+
 .projetos-box-content:hover h2 {
-  color: #66056d;
+    color: #66056d;
+
 }
 
-/* texto dos projetos */
-.projetos-box-content p {
-    font-size: 18px;
-    color: white;
-    margin: 0;
-    text-align: center;
-}
-
-/* texto das tec dos projetos */
-.tecnologias {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 8px;
-    margin: 15px 0;
-    padding: 0;
-}
-
-/* estilos das tecnologias */
-.tec {
-    background: #ff6f91;
-    padding: 6px 12px;
-    border-radius: 15px;
-    font-size: 0.9em;
-    color: white;
-}
-
-/* botão de ver projeto */
-.projetos-box-content a {
-    background-color: #66056d;
-    border-radius: 15px;
-    padding: 15px;
-    color: white;
-    text-decoration: none;
-    margin-top: 20px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.projetos-box-content a:hover {
-    background-color: #300033;
-}
-
-/* camada detalhes escondida inicialmente */
-.projetos-box-content .detalhes {
+/* Camada de detalhes oculta inicialmente */
+.detalhes {
     position: absolute;
     top: 0;
     left: 0;
@@ -562,46 +493,89 @@ i {
     justify-content: center;
     text-align: center;
     border-radius: 20px;
+    
 }
 
-/* mostrar detalhes ao passar o mouse */
+/* Mostrar detalhes ao hover */
 .projetos-box-content:hover .detalhes {
     opacity: 1;
     pointer-events: auto;
 }
 
-/* escurecer img e título ao mostrar detalhes */
-.projetos-box-content:hover img,
-.projetos-box-content:hover h2 {
+/* Escurece a imagem ao mostrar detalhes */
+.projetos-box-content:hover img {
     filter: brightness(30%);
 }
 
-.detalhes {
-  display: none;
-  transition: all 0.3s ease;
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin: 20px 0 10px;
 }
 
+.tec {
+    background-color: #66056d69;
+    border: 1.5px solid #66056d; /* roxo escuro */
+    padding: 6px 14px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    color: #fbc5ff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    user-select: none;
+    cursor: default;
+}
+
+.tec:hover {
+    background-color: #66056d; /* roxo escuro */
+    color: #f0e6fb; /* roxo clarinho para contraste */
+    box-shadow: 0 0 8px #66056daa;
+}
+
+/* Botão GitHub */
+.projetos-box-content a {
+    background-color: #66056d;
+    border-radius: 15px;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.projetos-box-content a:hover {
+    background-color: #300033;
+}
+
+/* Classes adicionais para suporte JS (caso usado) */
+.projetos-box-content.mostrar-detalhes .detalhes {
+    display: flex;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Escondido por padrão */
+.btn-detalhes, 
 .detalhes-projeto.ativo {
-  display: block;
-}
-
-.btn-detalhes {
     display: none;
 }
 
-
-/* SEÇÃO SERVIÇOS + FORMULÁRIO */
+/* Seção: Serviços e Formulário */
 .servicos-form {
   max-width: 1200px;
   margin: 60px auto;
   padding: 40px 20px;
   display: flex;
-  gap: 60px;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
 }
 
-.servicos-form .servicos, 
+.servicos-form .servicos,
 .servicos-form .formulario {
   flex: 1 1 450px;
   background: white;
@@ -613,31 +587,29 @@ i {
 
 .servicos-form .servicos h1,
 .servicos-form .form-card h1 {
-    font-size: 40px;
-    color: #66056d;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-
+  font-size: 40px;
+  color: #66056d;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
+
 .servicos-form .servicos ul {
-    list-style: none;
-    padding: 0;
-} 
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
 
 .servicos-form .servicos ul li {
-    list-style: none;
-    background: var(--purple-bg);
+  background: var(--purple-bg);
   border-radius: 15px;
   margin: 15px 0;
   padding: 18px;
   font-weight: bold;
   color: var(--purple-dark);
   box-shadow: inset 0 0 10px #d6b5f7;
-  transition: background 0.3s ease;
-
+  transition: background 0.3s ease, color 0.3s ease;
 }
-
 
 .servicos-form .servicos ul li:hover {
   background: var(--purple-light);
@@ -650,7 +622,6 @@ i {
   gap: 20px;
 }
 
-
 .servicos-form .form-card input,
 .servicos-form .form-card textarea {
   padding: 18px 20px;
@@ -658,7 +629,7 @@ i {
   border: 2px solid var(--purple-light);
   border-radius: 15px;
   background: #fff;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .servicos-form .form-card input:focus,
