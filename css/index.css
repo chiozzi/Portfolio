@@ -870,7 +870,7 @@ footer p {
   font-size: 20px;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  /* NÃO colocar display:none aqui, só controle pelo JS */
+  
 }
 
 
