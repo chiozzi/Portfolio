@@ -150,6 +150,7 @@
     font-size: 0.9rem;
     overflow: visible;
     flex-grow: 1;
+    padding-top: 1  0px;
   }
 
   .btn-detalhes,
