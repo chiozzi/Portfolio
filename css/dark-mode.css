@@ -39,17 +39,16 @@ body.dark-mode .btn:hover {
     background-color: #b866be;
 }
 
-body.dark-mode .img-intro-content .img-intro {
+body.dark-mode .img-intro {
     border-color: #db90e2;
 }
 
-/* SESSÃO SOBRE E HABILIDADES */
-body.dark-mode .sobre-habilidades {
+/* SESSÃO SOBRE */
+body.dark-mode .sobre {
     background-color: #1e1e1e;
 }
 
-body.dark-mode .sobre-content h1,
-body.dark-mode .habilidades-content h1 {
+body.dark-mode .sobre-content h1 {
     color: #db90e2;
 }
 
@@ -57,7 +56,15 @@ body.dark-mode .sobre-content p {
     color: #f0f0f0;
 }
 
+/* SESSÃO HABILIDADES */
+body.dark-mode .habilidades-aprendendo {
+    background-color: #1e1e1e;
+}
 
+body.dark-mode .habilidades-content h1,
+body.dark-mode .aprendendo-content h1 {
+    color: #db90e2;
+}
 
 body.dark-mode .icone-box {
     background-color: #292929;
@@ -72,7 +79,6 @@ body.dark-mode .icone-box p {
     color: #f0f0f0;
 }
 
-
 /* SESSÃO PROJETOS */
 body.dark-mode .projetos {
     background-color: #1e1e1e;
@@ -86,21 +92,20 @@ body.dark-mode .projetos-content p {
     color: #f0f0f0;
 }
 
-
-body.dark-mode .projetos-box-content {
+body.dark-mode .projeto-card {
     background-color: #292929;
     border-color: #b866be;
 }
 
-body.dark-mode .projetos-box-content h2 {
+body.dark-mode .projeto-card h3 {
     color: #db90e2;
 }
 
-body.dark-mode .projetos-box-content p {
+body.dark-mode .projeto-card p {
     color: #f0f0f0;
 }
 
-body.dark-mode .projetos-box-content a {
+body.dark-mode .projeto-card a {
     background-color: #b866be;
     color: white;
 }
@@ -113,8 +118,6 @@ body.dark-mode .contato {
 body.dark-mode .contato-content h1 {
     color: #dbb3df;
 }
-
-
 
 body.dark-mode .contato-box-content button {
     background-color: #66056d;

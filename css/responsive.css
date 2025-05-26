@@ -1,0 +1,324 @@
+/* ============================
+   RESPONSIVIDADE PORTFÓLIO
+   ============================ */
+
+/* ----------- MOBILE FIRST (até 767px) ----------- */
+@media (max-width: 767px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* NAVBAR */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 999;
+    background-color: var(--purple-medium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--purple-medium);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100vw;
+    padding: 20px 0;
+    gap: 20px;
+    z-index: 998;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 32px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+  }
+
+  #toggle-dark-mode {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+    z-index: 1001;
+  }
+
+  nav.active ul {
+    display: flex;
+  }
+
+  /* INTRO */
+  .intro {
+    flex-direction: column;
+    height: auto;
+    padding: 100px 20px 40px;
+    text-align: center;
+  }
+
+  .intro-content h1 {
+    font-size: 32px;
+    text-align: left;
+    margin-left: 10px;
+  }
+
+  .intro-content p {
+    font-size: 16px;
+  }
+
+  .img-intro {
+    width: 200px;
+    margin-top: 20px;
+  }
+
+  /* SOBRE */
+  .sobre {
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    gap: 20px;
+  }
+
+  .sobre-content h1 {
+    font-size: 28px;
+  }
+
+  .sobre-content p {
+    font-size: 16px;
+  }
+
+  /* HABILIDADES */
+  .habilidades-aprendendo {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .icone-box {
+    width: 90px;
+    height: 90px;
+  }
+
+  .icone-box i {
+    font-size: 28px;
+  }
+
+  .icone-box p {
+    font-size: 0.9rem;
+  }
+
+  /* PROJETOS */
+  .projetos-web .projeto-card,
+  .projetos-mobile .projeto-card {
+    height: auto;
+  }
+
+  .projetos-web .projeto-card {
+    height: 330px;
+  }
+
+  .detalhes {
+    font-size: 0.9rem;
+    overflow: visible;
+    flex-grow: 1;
+  }
+
+  .btn-detalhes,
+  .btn-ver-detalhes {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px 16px;
+    background-color: #66056d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-detalhes:hover,
+  .btn-ver-detalhes:hover {
+    background-color: #a351a2;
+  }
+
+  .btn-fechar-detalhes {
+    display: inline-block;
+    margin-top: 15px;
+    margin-bottom: 100px;
+    padding: 8px 16px;
+    background-color: #66056d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    clear: both;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-fechar-detalhes:hover {
+    background-color: #a351a2;
+  }
+
+  .projeto-card .detalhes {
+    display: none !important;
+  }
+
+  .projeto-card.ativo .detalhes {
+    display: block !important;
+  }
+
+  .projeto-card.ativo .btn-ver-detalhes {
+    display: none !important;
+  }
+
+  /* SERVIÇOS E FORMULÁRIO */
+  .servicos-form {
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  /* CONTATO */
+  .contato-box {
+    gap: 30px;
+  }
+
+  .contato-box-content {
+    width: 70px;
+    height: 70px;
+  }
+
+  .contato-box-content button {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+/* ----------- TABLET (768px - 1023px) ----------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  nav ul {
+    gap: 20px;
+  }
+
+  .intro {
+    flex-direction: column;
+    height: auto;
+    padding: 100px 40px 40px;
+  }
+
+  .intro-content h1 {
+    font-size: 40px;
+  }
+
+  .intro-content p {
+    font-size: 18px;
+  }
+
+  .img-intro {
+    width: 220px;
+  }
+
+  .sobre {
+    gap: 40px;
+    padding: 30px;
+    margin: 30px;
+  }
+
+  .habilidades-aprendendo {
+    gap: 30px;
+    padding: 30px;
+  }
+
+  .icone-box {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icone-box i {
+    font-size: 32px;
+  }
+
+  .icone-box p {
+    font-size: 1rem;
+  }
+
+  .projetos-web .projeto-card,
+  .projetos-mobile .projeto-card {
+    height: auto;
+  }
+
+  .contato-box {
+    gap: 40px;
+  }
+
+  .contato-box-content {
+    width: 80px;
+    height: 80px;
+  }
+
+  .contato-box-content button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+}
+
+/* ----------- DESKTOP (1024px+) ----------- */
+@media (min-width: 1024px) {
+
+  .menu-toggle {
+    display: none;
+  }
+
+  #toggle-dark-mode {
+    position: static;
+  }
+
+  nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  nav ul {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .btn-detalhes {
+    display: none;
+  }
+
+  .projeto-card .detalhes {
+    display: none;
+    transition: max-height 0.3s ease;
+  }
+
+  .projeto-card:hover .detalhes {
+    display: block;
+  }
+}
