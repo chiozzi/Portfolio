@@ -110,6 +110,41 @@ body.dark-mode .projeto-card a {
     color: white;
 }
 
+
+
+
+/* SESSÃO SERVIÇOS E FORM */
+body.dark-mode .servicos-form .servicos,
+body.dark-mode .servicos-form .formulario {
+    background-color: #1e1e1e !important;
+    box-shadow: 0 0 10px rgba(219, 144, 226, 0.3) !important;
+    color: #f0f0f0;
+}
+
+body.dark-mode .servicos-form .servicos ul li {
+    background-color: #292929 !important;
+    color: #db90e2 !important;
+    box-shadow: inset 0 0 10px #b866be !important;
+}
+
+body.dark-mode .servicos-form .servicos ul li:hover {
+    background-color: #b866be !important;
+    color: #fff !important;
+}
+
+body.dark-mode .servicos-form .form-card input,
+body.dark-mode .servicos-form .form-card textarea {
+    background-color: #292929 !important;
+    color: #f0f0f0 !important;
+    border-color: #b866be !important;
+}
+
+body.dark-mode .servicos-form .form-card input::placeholder,
+body.dark-mode .servicos-form .form-card textarea::placeholder {
+    color: #db90e2 !important;
+}
+
+
 /* SESSÃO CONTATO */
 body.dark-mode .contato {
     background-color: #1e1e1e;

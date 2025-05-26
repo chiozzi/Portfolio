@@ -551,6 +551,7 @@ i {
     background: rgba(158, 57, 165, 0.95);
     color: white;
     padding: 20px;
+    padding-top: 300px;
     box-sizing: border-box;
     opacity: 0;
     pointer-events: none;
