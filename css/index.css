@@ -117,7 +117,12 @@ nav ul li a:hover {
 
 .menu-toggle {
   display: none; /* só aparece no responsivo */
-}       
+}    
+
+
+.dark-mode-toggle.inside-menu {
+    display: none;
+  }
 
 /* BOTÃO MODO ESCURO */
 .dark-mode-toggle {

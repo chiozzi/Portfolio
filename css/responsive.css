@@ -37,6 +37,22 @@
     z-index: 998;
   }
 
+
+
+  /* Só mostra o botão de dark mode DENTRO do menu no mobile */
+.dark-mode-toggle:not(.inside-menu) {
+  display: none;
+}
+
+/* Exibe o botão de dark mode dentro do menu no mobile */
+.dark-mode-toggle.inside-menu {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+
   .menu-toggle {
     display: block;
     font-size: 32px;
@@ -48,6 +64,7 @@
     top: 20px;
     right: 20px;
     z-index: 1001;
+    left: 300px;
   }
 
   #toggle-dark-mode {
