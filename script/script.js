@@ -67,16 +67,3 @@ function iniciarTypeWriter() {
 
   typeWriter();
 }
-
-// 🍔 Menu Hamburguer (mobile)
-function iniciarMenuHamburguer() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navUl = document.querySelector('nav ul');
-
-  if (menuToggle && navUl) {
-    menuToggle.addEventListener('click', () => {
-      navUl.classList.toggle('show');
-    });
-  }
-}
-
