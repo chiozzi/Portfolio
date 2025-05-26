@@ -852,3 +852,36 @@ footer p {
  
 }
 
+#btnTopo {
+  display: flex;               /* sempre flex para alinhar o ícone */
+  justify-content: center;     /* centralizar horizontalmente */
+  align-items: center;         /* centralizar verticalmente */
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  background-color: #880093;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  /* NÃO colocar display:none aqui, só controle pelo JS */
+}
+
+
+
+#btnTopo:hover {
+  background-color: #dbb3df;
+  color: black;
+}
+
+
+#iconetopo {
+    margin-right: 20px;
+    margin-left: 6px;
+}
