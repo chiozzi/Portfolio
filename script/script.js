@@ -8,7 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // 🌙 MODO ESCURO com localStorage
 function iniciarModoEscuro() {
-  const toggle = document.getElementById('toggle-dark-mode');
+  const toggleDesktop = document.getElementById('toggle-dark-mode');
+  const toggleMobile = document.getElementById('toggle-dark-mode-mobile');
+
   const elementosAfetados = [
     document.body,
     document.querySelector('nav'),
@@ -16,23 +18,33 @@ function iniciarModoEscuro() {
     ...document.querySelectorAll('.intro, .sobre, .habilidades-aprendendo, .projetos, .projeto-card, .contato, .servicos, .formulario')
   ];
 
-  if (!toggle) return;
-
   const modoSalvo = localStorage.getItem('darkMode') === 'true';
-  toggle.checked = modoSalvo;
 
-  elementosAfetados.forEach(el => {
-    if (el) el.classList.toggle('dark-mode', modoSalvo);
+  // Aplica o modo salvo
+  if (modoSalvo) {
+    elementosAfetados.forEach(el => el?.classList.add('dark-mode'));
+    if (toggleDesktop) toggleDesktop.checked = true;
+    if (toggleMobile) toggleMobile.checked = true;
+  }
+
+  // Função de alternância
+  function alternarModoEscuro(ativado) {
+    elementosAfetados.forEach(el => el?.classList.toggle('dark-mode', ativado));
+    if (toggleDesktop) toggleDesktop.checked = ativado;
+    if (toggleMobile) toggleMobile.checked = ativado;
+    localStorage.setItem('darkMode', ativado);
+  }
+
+  // Eventos
+  toggleDesktop?.addEventListener('change', () => {
+    alternarModoEscuro(toggleDesktop.checked);
   });
 
-  toggle.addEventListener('change', () => {
-    const modoAtivo = toggle.checked;
-    elementosAfetados.forEach(el => {
-      if (el) el.classList.toggle('dark-mode', modoAtivo);
-    });
-    localStorage.setItem('darkMode', modoAtivo);
+  toggleMobile?.addEventListener('change', () => {
+    alternarModoEscuro(toggleMobile.checked);
   });
 }
+
 
 
 // 💬 EFEITO MÁQUINA DE ESCREVER
