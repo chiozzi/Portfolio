@@ -52,7 +52,7 @@ function iniciarModoEscuro() {
 function iniciarTypeWriter() {
   const frases = [
     "Estudante de Análise e Desenvolvimento de Sistemas",
-    "Apaixonada por programação 💻",
+    "Desenvolvedora em constante aprendizado 💡",
     "Sempre em busca de evolução 🚀"
   ];
 

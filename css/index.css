@@ -880,8 +880,7 @@ footer p {
   color: black;
 }
 
-
 #iconetopo {
-    margin-right: 20px;
-    margin-left: 6px;
+  margin: 0;
 }
+
