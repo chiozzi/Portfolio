@@ -502,6 +502,26 @@ i {
     margin-bottom: 20px;
 }
 
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  touch-action: pan-y;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  pointer-events: none;
+  user-select: none;
+}
+
 
 /* PROJETOS MOBILE – estilo celular */
 .projetos-mobile {
@@ -606,7 +626,7 @@ i {
     padding: 10px 18px;
     color: white;
     text-decoration: none;
-    margin-top: 15px;
+    margin-top: 5px;
     display: inline-block;
     font-size: 18px;
     transition: background-color 0.3s ease;

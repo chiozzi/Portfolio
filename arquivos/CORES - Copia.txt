@@ -1,0 +1,17 @@
+CORES
+roxo claro - #7D4F9E
+roxo escuro - #4A0E5E
+
+
+
+
+roxo escuraço quase azul - #1E1B2E 
+roxo forte - #6C4AB6
+roxo intermediário - #7D4F9E
+roxo medio - #A259FF
+roxo bem fraquinho - #B388EB
+
+
+
+cinza claro - #C2B8D9
+cinza escuro - #949494

@@ -1,0 +1,25 @@
+mais fraco
+#dbb3df
+#cf99d4
+#c480c9
+#b866be
+#ac4db3
+#a033a9
+#94199e
+#880093
+mais forte
+
+
+a059a5
+
+
+Modo Claro:
+Fundo: Lavanda (#E6E6FA) ou Roxo Lavanda (#9B59B6)
+Texto: Roxo Médio (#800080) ou Violeta (#8A2BE2)
+Botões/Links: Magenta (#FF00FF) ou Roxo Lavanda (#9B59B6)
+Detalhes: Amatista (#9966CC) ou Mauve (#E0B0FF)
+Modo Escuro:
+Fundo: Roxo Escuro (#4B0082) ou Púrpura (#6A0DAD)
+Texto: Branco (#FFFFFF) ou Cinza Claro (#f0f0f0)
+Botões/Links: Magenta (#FF00FF) ou Violeta (#8A2BE2)
+Detalhes: Roxo Médio (#800080) ou Amatista (#9966CC)

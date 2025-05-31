@@ -37,6 +37,8 @@
     z-index: 998;
   }
 
+  
+
 
 
   /* Só mostra o botão de dark mode DENTRO do menu no mobile */
@@ -146,11 +148,12 @@
     height: 330px;
   }
 
-  .detalhes {
+ 
+  .projetos-web .detalhes{
     font-size: 0.9rem;
     overflow: visible;
     flex-grow: 1;
-    padding-top: 1  0px;
+    padding: 20px;
   }
 
   .btn-detalhes,

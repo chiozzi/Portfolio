@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   iniciarTypeWriter();
   iniciarMenuHamburguer();
   configurarDetalhesProjetos();
-  iniciarBotaoVoltarTopo(); 
+  iniciarBotaoVoltarTopo();
+  iniciarCarrossel();
 });
 
 
@@ -21,14 +22,12 @@ function iniciarModoEscuro() {
 
   const modoSalvo = localStorage.getItem('darkMode') === 'true';
 
-  // Aplica o modo salvo
   if (modoSalvo) {
     elementosAfetados.forEach(el => el?.classList.add('dark-mode'));
     if (toggleDesktop) toggleDesktop.checked = true;
     if (toggleMobile) toggleMobile.checked = true;
   }
 
-  // Função de alternância
   function alternarModoEscuro(ativado) {
     elementosAfetados.forEach(el => el?.classList.toggle('dark-mode', ativado));
     if (toggleDesktop) toggleDesktop.checked = ativado;
@@ -36,7 +35,6 @@ function iniciarModoEscuro() {
     localStorage.setItem('darkMode', ativado);
   }
 
-  // Eventos
   toggleDesktop?.addEventListener('change', () => {
     alternarModoEscuro(toggleDesktop.checked);
   });
@@ -45,7 +43,6 @@ function iniciarModoEscuro() {
     alternarModoEscuro(toggleMobile.checked);
   });
 }
-
 
 
 // 💬 EFEITO MÁQUINA DE ESCREVER
@@ -107,7 +104,7 @@ function iniciarMenuHamburguer() {
 }
 
 
-// 📦 DETALHES DOS PROJETOS (abrir e fechar)
+// 📦 DETALHES DOS PROJETOS
 function configurarDetalhesProjetos() {
   document.querySelectorAll('.btn-detalhes').forEach(botao => {
     botao.addEventListener('click', () => {
@@ -125,24 +122,75 @@ function configurarDetalhesProjetos() {
 }
 
 
-// BOTAO VOLTAR AO TOPO 
-// Mostrar botão quando rolar para baixo
+// 🔝 BOTÃO VOLTAR AO TOPO
 function iniciarBotaoVoltarTopo() {
   const btn = document.getElementById("btnTopo");
   if (!btn) return;
 
   window.addEventListener("scroll", () => {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-      btn.style.display = "block";
-    } else {
-      btn.style.display = "none";
-    }
+    btn.style.display = (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200)
+      ? "block" : "none";
   });
 
   btn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+
+// 🎠 CARROSSEL DE IMAGENS
+function iniciarCarrossel() {
+  const carousels = document.querySelectorAll(".carousel");
+
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector(".carousel-track");
+    const imgs = track?.querySelectorAll("img");
+    if (!track || !imgs || imgs.length === 0) return;
+
+    let index = 0;
+
+    const update = () => {
+      const width = imgs[0].clientWidth;
+      track.style.transform = `translateX(-${index * width}px)`;
+    };
+
+    setInterval(() => {
+      index = (index + 1) % imgs.length;
+      update();
+    }, 4000);
+
+    let startX = 0, currentX = 0, isDragging = false;
+
+    function start(x) {
+      isDragging = true;
+      startX = x;
+    }
+
+    function move(x) {
+      if (!isDragging) return;
+      currentX = x;
+      const delta = currentX - startX;
+      track.style.transform = `translateX(${delta - index * imgs[0].clientWidth}px)`;
+    }
+
+    function end() {
+      if (!isDragging) return;
+      const delta = currentX - startX;
+      if (delta < -50 && index < imgs.length - 1) index++;
+      else if (delta > 50 && index > 0) index--;
+      update();
+      isDragging = false;
+    }
+
+    carousel.addEventListener("touchstart", e => start(e.touches[0].clientX));
+    carousel.addEventListener("touchmove", e => move(e.touches[0].clientX));
+    carousel.addEventListener("touchend", end);
+
+    carousel.addEventListener("mousedown", e => start(e.clientX));
+    carousel.addEventListener("mousemove", e => move(e.clientX));
+    carousel.addEventListener("mouseup", end);
+    carousel.addEventListener("mouseleave", end);
+
+    window.addEventListener("resize", update);
   });
 }
