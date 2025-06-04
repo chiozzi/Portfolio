@@ -178,7 +178,7 @@
 
   .btn-fechar-detalhes {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 100px;
     padding: 8px 16px;
     background-color: #66056d;
@@ -230,6 +230,23 @@
     height: 50px;
     font-size: 20px;
   }
+  .projetos-mobile .projeto-card .detalhes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* opcional, útil para centralizar texto */
+    flex-direction: column; /* se os itens estiverem um abaixo do outro */
+  }
+
+  .projeto-card.ativo .detalhes {
+  display: flex;    
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+
 }
 
 /* ----------- TABLET (768px - 1023px) ----------- */
@@ -284,6 +301,11 @@
   .projetos-web .projeto-card,
   .projetos-mobile .projeto-card {
     height: auto;
+  }
+
+  .projetos-mobile .projeto-card .detalhes {
+    justify-content: center;
+    align-items: center;
   }
 
   .contato-box {

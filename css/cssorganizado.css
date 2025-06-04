@@ -1,0 +1,757 @@
+ :root {
+     --purple-dark: #4b136d;
+     --purple-medium: #66056d;
+     --purple-light: #a86cd8;
+     --purple-bg: #f5e8ff;
+     --text-dark: #2b1a40;
+     --text-light: #fff;
+     --shadow-soft: rgba(102, 5, 109, 0.3);
+}
+ html {
+     scroll-behavior: smooth;
+}
+ body {
+     font-family: Comfortaa, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f4f4f4;
+     transition: background-color 0.5s ease, color 0.5s ease;
+}
+ #sobre, #habilidades-aprendendo, #projetos, #contato, #servicos-form {
+     scroll-margin-top: 80px;
+    /* altura da navbar */
+}
+/* NAV BAR */
+ nav {
+     display: flex;
+     justify-content: space-between;
+     background-color: #66056d;
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     z-index: 10;
+     align-items: center;
+     height: 80px;
+     padding: 0 30px;
+     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    /* sombra suave */
+     transition: background-color 0.3s ease;
+}
+/* logo da nav */
+ .leticiacode-logo {
+     display: flex;
+     align-items: center;
+     font-size: 36px;
+     font-weight: 900;
+     color: #fff;
+     margin-left: 10px;
+     letter-spacing: 1.5px;
+     user-select: none;
+     text-shadow: 0 0 5px #d3a1d3;
+}
+/* texto da logo da nav */
+ .leticiacode-logo p {
+     font-size: 32px;
+     color: white;
+     margin: 0;
+     font-weight: 700;
+}
+/* links da nav */
+ nav ul {
+     margin: 0;
+     padding: 0;
+     display: flex;
+     list-style: none;
+     gap: 10px;
+     align-items: center;
+     flex-grow: 1;
+     justify-content: flex-end;
+}
+/* cada item da nav */
+ nav ul li {
+     padding: 12px 22px;
+     border-radius: 12px;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+     font-size: 20px;
+     font-weight: 600;
+     cursor: pointer;
+}
+/* hover item nav */
+ nav ul li:hover {
+     background-color: #b866be;
+     transform: scale(1.1);
+     box-shadow: 0 4px 8px rgba(184, 102, 190, 0.4);
+}
+/* texto dos links */
+ nav ul li a {
+     text-decoration: underline;
+     color: white;
+     font-weight: 700;
+     transition: color 0.3s ease;
+}
+ nav ul li a:hover {
+     color: #ffe6ff;
+}
+ .menu-toggle {
+     display: none;
+    /* só aparece no responsivo */
+}
+ .dark-mode-toggle.inside-menu {
+     display: none;
+}
+/* BOTÃO MODO ESCURO */
+ .dark-mode-toggle {
+     position: static;
+     background: none;
+     border: none;
+     font-size: 1.7rem;
+     cursor: pointer;
+     color: white;
+     transition: color 0.3s ease;
+     margin-left: 20px;
+     margin-right: 55px;
+}
+ body.dark-mode #toggle-dark-mode {
+     color: #f0f0f0;
+}
+/* Esconde o checkbox */
+ .dark-mode-toggle input {
+     display: none;
+}
+/* Estilo do "slider" (label) */
+ .dark-mode-toggle label {
+     cursor: pointer;
+     width: 60px;
+     height: 30px;
+     background-color: #ccc;
+     border-radius: 30px;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 10px;
+     box-sizing: border-box;
+     transition: background-color 0.3s ease;
+     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+/* Ícones */
+ .dark-mode-toggle .icon {
+     font-size: 18px;
+     user-select: none;
+     pointer-events: none;
+     color: #555;
+     transition: color 0.3s ease;
+     margin: 0 -3px;
+}
+/* Bola do toggle */
+ .dark-mode-toggle .toggle-ball {
+     position: absolute;
+     top: 3px;
+     left: 3px;
+     width: 24px;
+     height: 24px;
+     background-color: white;
+     border-radius: 50%;
+     transition: transform 0.3s ease;
+     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+/* Estado ativo: checkbox marcado */
+ .dark-mode-toggle input:checked + label {
+     background-color: #66056d;
+     color: #f0f0f0;
+}
+/* Move a bolinha */
+ .dark-mode-toggle input:checked + label .toggle-ball {
+     transform: translateX(30px);
+}
+/* Cores dos ícones conforme estado */
+ .dark-mode-toggle input:checked + label .moon {
+     color: #f0f0f0;
+}
+ .dark-mode-toggle input:not(:checked) + label .sun {
+     color: #999;
+}
+/* SESSÃO INTRO */
+ .intro {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 20px;
+     background-color: #66056d;
+     border-radius: 12px;
+     flex-wrap: wrap;
+     height: 600px;
+     box-shadow: 0 8px 20px rgba(102, 5, 109, 0.6);
+}
+/* texto da sessão intro */
+ .intro-content {
+     flex: 1;
+     text-align: center;
+}
+/*titulo da sessão intro */
+ .intro-content h1 {
+     font-size: 48px;
+     color: #dbb3df;
+     font-weight: 900;
+     margin-bottom: 25px;
+     text-shadow: 1px 1px 8px #a351a2;
+}
+/* texto da sessão intro */
+ .intro-content p {
+     font-size: 22x;
+     color: white;
+}
+/* botão da sessão intro */
+ .btn {
+     text-decoration: underline;
+     color: #dbb3df;
+     font-weight: 700;
+     padding: 12px 25px;
+     border-radius: 14px;
+     transition: background-color 0.3s ease, transform 0.2s ease;
+     font-size: 22px;
+     display: inline-block;
+     margin-top: 25px;
+     box-shadow: 0 2px 6px rgba(184, 102, 190, 0.4);
+}
+ .btn:hover {
+     background-color: #a351a2;
+     transform: scale(1.05);
+     box-shadow: 0 6px 14px rgba(184, 102, 190, 0.6);
+}
+/* ícone so mouse */
+ i {
+     margin-left: 7px;
+}
+/* imagem da sessão intro */
+ .img-intro-content {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+}
+/* realmente a imagem da sessão intro */
+ .img-intro {
+     width: 280px;
+     border: 3px solid #dbb3df;
+     border-radius: 50%;
+     box-shadow: 0 4px 12px rgba(219, 179, 223, 0.7);
+     transition: transform 0.4s ease;
+}
+ .img-intro:hover {
+     transform: scale(1.08);
+}
+/* SESSÃO SOBRE */
+ .sobre {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     align-items: flex-start;
+     gap: 100px;
+     padding: 50px;
+     margin: 50px;
+     border-radius: 10px;
+     background: #fff;
+     box-shadow: 0 6px 18px rgba(102, 5, 109, 0.15);
+}
+/* texto de sobre */
+ .sobre-content {
+     flex: 1;
+     text-align: center;
+}
+/* titulo de sobre */
+ .sobre-content h1 {
+     font-size: 40px;
+     color: #66056d;
+     font-weight: bold;
+     text-transform: uppercase;
+}
+/* texto de sobre */
+ .sobre-content p {
+     font-size: 20px;
+     color: black;
+     margin-bottom: 20px;
+     line-height: 1.5;
+    /* Aumenta o espaçamento entre linhas */
+}
+/* SESSÃO HABILIDADES */
+ .habilidades-aprendendo {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 50px;
+     padding: 40px 20px;
+     margin: 40px auto;
+     max-width: 1200px;
+     background: white;
+     border-radius: 15px;
+     box-shadow: 0 8px 25px var(--shadow-soft);
+}
+ .habilidades-content, .aprendendo-content {
+     flex: 1 1 300px;
+     text-align: center;
+}
+ .habilidades-content h1, .aprendendo-content h1 {
+     font-size: 40px;
+     font-weight: bold;
+     color: #66056d;
+     text-transform: uppercase;
+}
+ .habilidades-icons, .aprendendo-icons {
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+     gap: 25px;
+}
+ .icone-box {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     width: 120px;
+     height: 120px;
+     padding: 15px;
+     border-radius: 20px;
+     background: #a351a2;
+     box-shadow: 0 5px 15px rgba(102, 5, 109, 0.4);
+     color: var(--text-light);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     cursor: default;
+}
+ .icone-box:hover {
+     transform: translateY(-8px);
+     box-shadow: 0 12px 25px rgba(102, 5, 109, 0.6);
+}
+ .icone-box i {
+     font-size: 40px;
+     margin-bottom: 10px;
+     filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.15));
+     margin: 0;
+     padding: 0;
+     display: block;
+}
+ .icone-box p {
+     font-weight: bold;
+     font-size: 1.1rem;
+     color: var(--text-light);
+}
+/* SESSÃO PROJETOS */
+ .projetos {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 50px auto;
+     padding: 20px;
+     background-color: #510357;
+     border-radius: 10px;
+     box-shadow: 0 8px 24px rgba(102, 5, 109, 0.5);
+     width: 85%;
+}
+ .projetos-content {
+     text-align: center;
+}
+ .projetos-content h1 {
+     font-size: 40px;
+     color: white;
+     font-weight: bold;
+     margin-bottom: 20px;
+     text-transform: uppercase;
+}
+ .projetos-content p {
+     font-size: 18px;
+     color: white;
+     margin-bottom: 30px;
+}
+/* Container principal */
+ .projetos-box {
+     display: flex;
+     flex-direction: column;
+     gap: 60px;
+     padding: 40px 20px;
+}
+/* PROJETOS WEB – ocupam a tela inteira */
+ .projetos-web {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     gap: 40px;
+     align-items: center;
+}
+ .projetos-web h2 {
+     align-self: center;
+     color: white;
+     font-size: 30px;
+     margin-bottom: 10px;
+     text-decoration: underline;
+}
+/* Cada projeto web ocupa toda a largura visível */
+ .projetos-web .projeto-card {
+     width: 100%;
+     max-width: 100%;
+     height: 90vh;
+     position: relative;
+     background-color: white;
+     border-radius: 20px;
+     box-shadow: 0 6px 16px rgba(102, 5, 109, 0.3);
+     overflow: hidden;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+     padding: 20px;
+     scroll-snap-align: start;
+}
+ .projetos-web .projeto-card:hover {
+     transform: translateY(-10px) scale(1.03);
+     box-shadow: 0 14px 30px rgba(102, 5, 109, 0.6);
+}
+ .projetos-web .projeto-card img {
+     width: 100%;
+     max-height: auto;
+     object-fit: contain;
+     border-radius: 12px;
+     margin-bottom: 20px;
+}
+ .carousel {
+     overflow: hidden;
+     position: relative;
+     width: 100%;
+     border-radius: 10px;
+     touch-action: pan-y;
+}
+ .carousel-track {
+     display: flex;
+     transition: transform 0.4s ease;
+}
+ .carousel-track img {
+     width: 100%;
+     flex-shrink: 0;
+     pointer-events: none;
+     user-select: none;
+}
+/* PROJETOS MOBILE – estilo celular */
+ .projetos-mobile {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     gap: 80px;
+     justify-content: center;
+     align-items: flex-start;
+}
+/* titulos projetos web | projetos mobile */
+ .projetos-mobile h2 {
+     width: 100%;
+     margin-bottom: 10px;
+     text-align: center;
+     color: white;
+     font-size: 30px;
+     text-decoration: underline;
+}
+ .projetos-mobile .projeto-card {
+     flex: 0 1 360px;
+     background-color: white;
+     border-radius: 20px;
+     box-shadow: 0 6px 16px rgba(102, 5, 109, 0.3);
+     overflow: hidden;
+     position: relative;
+     transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+     padding: 20px;
+}
+ .projetos-mobile .projeto-card:hover {
+     transform: translateY(-10px) scale(1.03);
+     box-shadow: 0 14px 30px rgba(102, 5, 109, 0.6);
+}
+ .projetos-mobile .projeto-card img {
+     width: 100%;
+     height: auto;
+     border-radius: 12px;
+     margin-bottom: 15px;
+}
+/* Detalhes sobre o projeto */
+ .detalhes {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(158, 57, 165, 0.95);
+     color: white;
+     padding: 20px;
+     padding-top: 300px;
+     box-sizing: border-box;
+     opacity: 0;
+     pointer-events: none;
+     transition: opacity 0.3s ease;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     text-align: center;
+     border-radius: 20px;
+}
+ .projeto-card:hover .detalhes {
+     opacity: 1;
+     pointer-events: auto;
+}
+/* Tecnologias usadas */
+ .tecnologias {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 12px;
+     margin: 20px 0 10px;
+}
+ .tec {
+     background-color: #66056d69;
+     border: 1.5px solid #66056d;
+     padding: 6px 14px;
+     border-radius: 25px;
+     font-size: 0.9em;
+     color: #fbc5ff;
+     font-weight: 600;
+     transition: all 0.3s ease;
+}
+ .tec:hover {
+     background-color: #66056d;
+     color: #f0e6fb;
+     box-shadow: 0 0 8px #66056daa;
+}
+/* Botão de ver projeto */
+ .projeto-card a {
+     background-color: #66056d;
+     border-radius: 15px;
+     padding: 10px 18px;
+     color: white;
+     text-decoration: none;
+     margin-top: 5px;
+     display: inline-block;
+     font-size: 18px;
+     transition: background-color 0.3s ease;
+}
+ .projeto-card a:hover {
+     background-color: #300033;
+}
+/* Botões escondidos no desktop */
+ .btn-ver-detalhes, .btn-fechar-detalhes {
+     display: none;
+}
+/* Desktop - detalhes aparecem no hover */
+ .projeto-card .detalhes {
+     display: none;
+     transition: max-height 0.3s ease;
+}
+ .projeto-card:hover .detalhes {
+     display: block;
+}
+/* Seção: Serviços e Formulário */
+ .servicos-form {
+     max-width: 1200px;
+     margin: 60px auto;
+     padding: 40px 20px;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 60px;
+}
+ .servicos-form .servicos, .servicos-form .formulario {
+     flex: 1 1 450px;
+     background: white;
+     border-radius: 25px;
+     box-shadow: 0 10px 30px var(--shadow-soft);
+     padding: 40px 30px;
+     text-align: center;
+}
+ .servicos-form .servicos h1, .servicos-form .form-card h1 {
+     font-size: 40px;
+     color: #66056d;
+     margin-bottom: 20px;
+     font-weight: bold;
+     text-transform: uppercase;
+}
+ .servicos-form .servicos ul {
+     list-style: none;
+     padding: 0;
+     margin-top: 20px;
+}
+ .servicos-form .servicos ul li {
+     background: var(--purple-bg);
+     border-radius: 15px;
+     margin: 15px 0;
+     padding: 18px;
+     font-weight: bold;
+     color: var(--purple-dark);
+     box-shadow: inset 0 0 10px #d6b5f7;
+     transition: background 0.3s ease, color 0.3s ease;
+}
+ .servicos-form .servicos ul li:hover {
+     background: var(--purple-light);
+     color: white;
+}
+ .servicos-form .form-card form {
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+ .servicos-form .form-card input, .servicos-form .form-card textarea {
+     padding: 18px 20px;
+     font-size: 1rem;
+     border: 2px solid var(--purple-light);
+     border-radius: 15px;
+     background: #fff;
+     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+ .servicos-form .form-card input:focus, .servicos-form .form-card textarea:focus {
+     border-color: var(--purple-medium);
+     outline: none;
+     box-shadow: 0 0 8px var(--purple-medium);
+}
+ .servicos-form .form-card button {
+     background: linear-gradient(45deg, var(--purple-medium), var(--purple-dark));
+     color: white;
+     padding: 18px 0;
+     font-size: 20px;
+     font-weight: bold;
+     border: none;
+     border-radius: 25px;
+     cursor: pointer;
+     box-shadow: 0 8px 20px var(--shadow-soft);
+     transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+ .servicos-form .form-card button:hover {
+     background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
+     box-shadow: 0 12px 30px var(--shadow-soft);
+}
+/* SESSÃO CONTATO */
+ .contato {
+     display: flex;
+     flex-direction: column;
+    /* Alinha os itens (h1 e p) em coluna, com o título em cima */
+     justify-content: center;
+     align-items: center;
+     padding: 20px;
+     flex-wrap: wrap;
+     background-color: #66056d;
+     border-radius: 20px;
+     max-width: 1100px;
+     margin: 60px auto 100px;
+     box-shadow: 0 8px 20px rgba(102, 5, 109, 0.6);
+     color: white;
+     text-align: center;
+}
+ .contato-content {
+     flex: 1;
+     text-align: center;
+}
+/* titulo da sessão contato */
+ .contato-content h1 {
+     font-size: 40px;
+     color: white;
+     font-weight: bold;
+     margin-bottom: 20px;
+     text-transform: uppercase;
+}
+/* box da sessão contato */
+ .contato-box {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-wrap: wrap;
+     gap: 70px;
+    /* espaço entre as caixinhas */
+     margin-top: 30px;
+}
+/* cada caixinha da sessão contato */
+ .contato-box-content {
+     padding: 5px;
+     width: 100px;
+     height: 100px;
+}
+/* cada botão da sessão contato */
+ .contato-box-content button {
+     width: 70px;
+     height: 70px;
+     background-color: #a351a2;
+     color: white;
+     font-size: 30px;
+     border: none;
+     border-radius: 20px;
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 0;
+     transition: transform 0.2s ease;
+}
+ .contato-box-content button:hover {
+     transform: translateY(-10px);
+}
+/* cada icone da sessão contato */
+ .contato-box-content button i {
+     line-height: 1;
+     margin: 0;
+     padding: 0;
+     display: block;
+     font-size: 40px;
+}
+ .contato-box-content a {
+     outline: none;
+     text-decoration: none;
+    /* remove qualquer sublinhado */
+}
+ .contato-box-content a:focus, .contato-box-content a:active, .contato-box-content button:focus, .contato-box-content button:active {
+     outline: none;
+     box-shadow: none;
+    /* caso algum shadow cause essa linha */
+}
+/* FOOTER */
+ footer {
+     background-color: #66056d;
+     color: white;
+     text-align: center;
+     padding: 0px ;
+     bottom: 0;
+     left: 0;
+     right: 0;
+     width: 100%;
+     z-index: 10;
+     margin-top: 50px;
+}
+ footer p {
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 15px;
+     margin: 0;
+     padding: 10px;
+}
+ #btnTopo {
+     display: flex;
+    /* sempre flex para alinhar o ícone */
+     justify-content: center;
+    /* centralizar horizontalmente */
+     align-items: center;
+    /* centralizar verticalmente */
+     position: fixed;
+     bottom: 30px;
+     right: 30px;
+     z-index: 999;
+     background-color: #880093;
+     color: white;
+     border: none;
+     padding: 12px;
+     border-radius: 50%;
+     width: 65px;
+     height: 65px;
+     font-size: 25px;
+     cursor: pointer;
+     box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+ #btnTopo:hover {
+     background-color: #dbb3df;
+     color: black;
+}
+ #iconetopo {
+     margin: 0;
+}
+ 
