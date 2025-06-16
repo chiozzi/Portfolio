@@ -507,6 +507,14 @@ i {
     text-transform: uppercase;
 }
 
+.projeto-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #510357;
+  font-weight: bold;
+}
+
+
 .projetos-content p {
     font-size: 18px;
     color: white;
@@ -542,7 +550,7 @@ i {
 .projetos-web .projeto-card {
     width: 100%;
     max-width: 100%;
-    height: 90vh;
+    height: auto;
     position: relative;
     background-color: white;
     border-radius: 20px;
@@ -581,6 +589,8 @@ i {
 .carousel-track {
   display: flex;
   transition: transform 0.4s ease;
+  max-height: 400px;
+  object-fit: cover;
 }
 
 .carousel-track img {
@@ -661,6 +671,17 @@ i {
     pointer-events: auto;
 }
 
+.detalhes p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.detalhes a {
+  margin: 5px 0;
+  display: inline-block;
+}
+
+
 /* Tecnologias usadas */
 .tecnologias {
     display: flex;
@@ -705,8 +726,6 @@ i {
 }
 
 
-
-
 /* Botões escondidos no desktop */
 .btn-detalhes,
 .btn-fechar-detalhes {
@@ -717,11 +736,16 @@ i {
 .projeto-card .detalhes {
   display: none;
   transition: max-height 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(20px);
 }
 
 .projeto-card:hover .detalhes {
+  opacity: 1;
+  transform: translateY(0);
   display: block;
 }
+
 
 
 
