@@ -1,5 +1,5 @@
 /* ============================
-   RESPONSIVIDADE PORTFÓLIO
+   RESPONSIVIDADE PORTFÓLIO (Mobile e Tablet)
    ============================ */
 
 /* ----------- MOBILE FIRST (até 767px) ----------- */
@@ -14,14 +14,13 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 999;
     background-color: var(--purple-medium);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    
   }
 
   nav ul {
@@ -31,29 +30,21 @@
     position: absolute;
     top: 60px;
     right: 0;
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     gap: 20px;
     z-index: 998;
   }
 
-  
+  .dark-mode-toggle:not(.inside-menu) {
+    display: none;
+  }
 
-
-
-  /* Só mostra o botão de dark mode DENTRO do menu no mobile */
-.dark-mode-toggle:not(.inside-menu) {
-  display: none;
-}
-
-/* Exibe o botão de dark mode dentro do menu no mobile */
-.dark-mode-toggle.inside-menu {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
-}
-
-
+  .dark-mode-toggle.inside-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
 
   .menu-toggle {
     display: block;
@@ -62,15 +53,14 @@
     background: none;
     border: none;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     z-index: 1001;
-    left: 300px;
   }
 
   #toggle-dark-mode {
-    position: absolute;
+    position: fixed;
     top: 22px;
     left: 20px;
     z-index: 1001;
@@ -80,7 +70,6 @@
     display: flex;
   }
 
-  /* INTRO */
   .intro {
     flex-direction: column;
     height: auto;
@@ -90,20 +79,29 @@
 
   .intro-content h1 {
     font-size: 32px;
-    text-align: left;
-    margin-left: 10px;
+    text-align: center;
+    margin-left: 0;
   }
 
   .intro-content p {
     font-size: 16px;
+    min-height: 20px;
+  }
+
+
+  
+  .contato-na-intro .contato-box {
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .img-intro {
-    width: 200px;
+    width: 240px;
     margin-top: 20px;
   }
 
-  /* SOBRE */
   .sobre {
     flex-direction: column;
     padding: 20px;
@@ -119,7 +117,6 @@
     font-size: 16px;
   }
 
-  /* HABILIDADES */
   .habilidades-aprendendo {
     flex-direction: column;
     padding: 20px;
@@ -138,26 +135,22 @@
     font-size: 0.9rem;
   }
 
-  /* PROJETOS */
   .projetos-web .projeto-card,
   .projetos-mobile .projeto-card {
-    height: auto;
+    height: auto !important;
   }
 
-  .projetos-web .projeto-card {
-    height: 330px;
-  }
-
- 
-  .projetos-web .detalhes{
+  .projetos-web .detalhes {
     font-size: 0.9rem;
     overflow: visible;
     flex-grow: 1;
     padding: 20px;
+    max-height: none !important;
   }
 
   .btn-detalhes,
-  .btn-ver-detalhes {
+  .btn-ver-detalhes,
+  .btn-fechar-detalhes {
     display: inline-block;
     margin: 10px 0;
     padding: 8px 16px;
@@ -169,29 +162,11 @@
     font-weight: 600;
     font-size: 1rem;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
   }
 
   .btn-detalhes:hover,
-  .btn-ver-detalhes:hover {
-    background-color: #a351a2;
-  }
-
-  .btn-fechar-detalhes {
-    display: inline-block;
-    margin-top: 10px;
-    margin-bottom: 100px;
-    padding: 8px 16px;
-    background-color: #66056d;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: 1rem;
-    clear: both;
-    transition: background-color 0.3s ease;
-  }
-
+  .btn-ver-detalhes:hover,
   .btn-fechar-detalhes:hover {
     background-color: #a351a2;
   }
@@ -201,23 +176,28 @@
   }
 
   .projeto-card.ativo .detalhes {
-    display: block !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
   }
 
   .projeto-card.ativo .btn-ver-detalhes {
     display: none !important;
   }
 
-  /* SERVIÇOS E FORMULÁRIO */
   .servicos-form {
     flex-direction: column;
     gap: 30px;
     padding: 20px;
   }
 
-  /* CONTATO */
-  .contato-box {
-    gap: 30px;
+  #contato .contato-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 
   .contato-box-content {
@@ -230,28 +210,10 @@
     height: 50px;
     font-size: 20px;
   }
-  .projetos-mobile .projeto-card .detalhes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; /* opcional, útil para centralizar texto */
-    flex-direction: column; /* se os itens estiverem um abaixo do outro */
-  }
-
-  .projeto-card.ativo .detalhes {
-  display: flex;    
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
-
-
 }
 
 /* ----------- TABLET (768px - 1023px) ----------- */
 @media (min-width: 768px) and (max-width: 1023px) {
-
   nav ul {
     gap: 20px;
   }
@@ -268,6 +230,7 @@
 
   .intro-content p {
     font-size: 18px;
+    min-height: 24px;
   }
 
   .img-intro {
@@ -301,6 +264,7 @@
   .projetos-web .projeto-card,
   .projetos-mobile .projeto-card {
     height: auto;
+    
   }
 
   .projetos-mobile .projeto-card .detalhes {
@@ -308,9 +272,15 @@
     align-items: center;
   }
 
-  .contato-box {
-    gap: 40px;
+  #contato .contato-box {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
+
+  
+
 
   .contato-box-content {
     width: 80px;
@@ -324,44 +294,5 @@
   }
 }
 
-/* ----------- DESKTOP (1024px+) ----------- */
-@media (min-width: 1024px) {
-
-  .menu-toggle {
-    display: none;
-  }
-
-  #toggle-dark-mode {
-    position: static;
-  }
-
-  nav {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-  }
-
-  nav ul {
-    display: flex !important;
-    flex-direction: row;
-    position: static;
-    background: none;
-    width: auto;
-    padding: 0;
-  }
-
-  .btn-detalhes {
-    display: none;
-  }
-
-  .projeto-card .detalhes {
-    display: none;
-    transition: max-height 0.3s ease;
-  }
-
-  .projeto-card:hover .detalhes {
-    display: block;
-  }
-}
+/* ----------- DESKTOP (1024px+) NÃO INCLUÍDO --------------- */
+/* O CSS do desktop está em outro arquivo (index.css) */
