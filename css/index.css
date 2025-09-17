@@ -681,6 +681,11 @@ i {
   display: inline-block;
 }
 
+small {
+  color: #ccc;
+  font-size: 22px;
+}
+
 
 /* Tecnologias usadas */
 .tecnologias {
@@ -746,10 +751,11 @@ i {
   display: block;
 }
 
-
-
-
-
+small {
+    margin: 8px 0;           /* Espaçamento acima e abaixo */
+    font-size: 14px;       /* Tamanho menor que o texto normal */
+    color: #242424;             /* Cor mais suave, cinza */
+}
 
 
 
