@@ -39,10 +39,22 @@ git remote remove origin
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 SUBIR PROJETO PELA PRIMEIRA VEZ NO REPOSITORIO
 (no terminal cmd)
 git init
-git remote add origin LINK
+git remote add origin https://github.com/chiozzi/Java_comentado.git
 git add .
 git commit -m "Primeiro commit"
 git branch -M main
@@ -55,6 +67,17 @@ ATUALIZAR PROJETO NO REPOSITORIO
 git add .
 git commit -m "atualização"
 git push origin main
+
+
+
+
+CASO VC CLONAR, ALTERAR E DPS QUISER SUBIR NO SEU PROPRIO REPOSITORIO
+git remote -v
+git remote remove origin
+git remote add origin LINK
+git commit -m "Primeiro commit"
+git branch -M main
+git push -u origin main
 
 
 
