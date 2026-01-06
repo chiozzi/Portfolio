@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Letícia Vitória | Desenvolvedora Front-End em formação</title>
+    <!--Título da guia-->
+    <title>Letícia Vitória | Dev </title>
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/cssorganizado.css">
     <link rel="stylesheet" href="css/dark-mode.css">
@@ -11,7 +12,8 @@
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
+     
     <meta name="description" content="Portfólio de Letícia Chiozzi, estudante de ADS com projetos em HTML, CSS, JavaScript e React.">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
@@ -73,7 +75,8 @@
   <div class="intro-content">
     <h1>Letícia Vitória</h1>
     <p><span id="typewriter-text"></span></p>
-    <p>Desenvolvedora em formação</p>
+    <p>Desenvolvedora Front-end focada em criação de sites funcionais e responsivos</p>
+    <p>Criação de sites e landing pages utilizando HTML, CSS, JavaScript, Angular e React.</p>
     <a href="#projetos" class="btn">Ver Projetos <i class="fa-solid fa-arrow-pointer"></i></a>
 
     <!-- CONTATO dentro da intro -->
@@ -233,7 +236,12 @@
                     <h3>beSafe (site)</h3>
                     <button class="btn-detalhes">Ver detalhes</button>
                     <div class="detalhes">
-                        <p>Landing page do app beSafe, uma rede social de apoio emocional. A página apresenta os recursos da plataforma, como desabafos anônimos e suporte psicológico.</p>
+                        <p>
+                        Landing page para app de apoio emocional, desenvolvida para organizar
+                        informações, apresentar funcionalidades e guiar o usuário de forma clara
+                        e intuitiva.
+                        </p>
+
                         <small>12/2024</small>
                         <div class="tecnologias">
                         <span class="tec">HTML</span>
@@ -647,35 +655,52 @@
         <section id="servicos-form" class="servicos-form" data-aos="fade-up">
         
             <div class="servicos">
-                <h1>O que eu posso fazer por você</h1>
-                    <ul>
-                        <li>Desenvolvimento de aplicações web utilizando Angular e Bootstrap</li>
-                        <li>Criação de interfaces funcionais e acessíveis no Figma, com foco em UX/UI</li>
-                        <li>Prototipagem de telas com atenção à usabilidade e responsividade</li>
-                        <li>Criação de landing pages para divulgação de produtos ou serviços</li>
-                        <li>Simulação e integração de APIs com JSON Server</li>
-                        <li>Desenvolvimento de APIs utilizando Java e Spring Boot</li>
-                        <li>Mapeamento de entidades e uso de DTOs com JPA</li>
-                        <li>Criação de planilhas e ferramentas de apoio para organização de processos e controle de produção</li>
-                        <li>Consultoria e manutenção de projetos web já existentes</li>
-                        <li>Capacidade de compreender diferentes áreas da empresa e propor soluções práticas e eficientes</li>
-                    </ul>
+            <h1>O que eu posso fazer por você</h1>
 
-
+            <ul>
+                <li><strong>Desenvolvimento Web Front-end:</strong> criação de interfaces responsivas com HTML, CSS, JavaScript, Angular e Bootstrap.</li>
+                <li><strong>UX/UI e prototipagem:</strong> criação de telas no Figma, priorizando usabilidade, acessibilidade e experiência do usuário.</li>
+                <li><strong>Landing pages:</strong> páginas otimizadas para conversão, ideais para divulgar produtos e serviços.</li>
+                <li><strong>Integração com APIs:</strong> consumo, simulação com JSON Server e organização de dados no front-end.</li>
+                <li><strong>Back-end com Java:</strong> desenvolvimento de APIs com Spring Boot, JPA e uso de DTOs.</li>
+                <li><strong>Organização de processos:</strong> criação de planilhas e ferramentas para controle e produtividade.</li>
+                <li><strong>Manutenção e melhorias:</strong> correções, refatoração e evolução de projetos web existentes.</li>
+                <li><strong>Visão de negócio:</strong> compreensão das necessidades do cliente e proposta de soluções práticas.</li>
+            </ul>
             </div>
+
 
             <!-- FORMULÁRIO -->
             <div class="formulario">
-                <div class="form-card">
+            <div class="form-card">
                 <h1>Me envie uma mensagem</h1>
+
                 <form action="https://formsubmit.co/chiozzileticia0114@gmail.com" method="POST">
-                    <input type="text" name="name" placeholder="Seu nome" required>
-                    <input type="email" name="email" placeholder="Seu e-mail" required>
-                    <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
-                    <button type="submit">Enviar</button>
+
+                <!-- CAMPOS VISÍVEIS -->
+                <input type="text" name="name" placeholder="Seu nome" required>
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+
+                <!-- CONFIGURAÇÕES IMPORTANTES -->
+                <!-- assunto do e-mail -->
+                <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
+
+                <!-- redireciona para página de obrigado (troque para sua URL) -->
+                <input type="hidden" name="_next" value="https://seu-site.com/obrigado.html">
+
+                <!-- desativa captcha (opcional) -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <!-- antispam -->
+                <input type="text" name="_honey" style="display:none">
+
+                <button type="submit">Enviar</button>
                 </form>
-                </div>
+
             </div>
+            </div>
+
         </section>
 
 
