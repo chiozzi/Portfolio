@@ -489,7 +489,7 @@ i {
     align-items: center;
     margin: 50px auto;
     padding: 20px;
-    background-color: #510357;
+    background--color: #510357;
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(102, 5, 109, 0.5);
     width: 85%;
@@ -532,11 +532,11 @@ i {
 /* PROJETOS WEB – ocupam a tela inteira */
 .projetos-web {
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    align-items: center;
 }
+
 
 .projetos-web h2 {
     align-self: center;
@@ -549,7 +549,7 @@ i {
 /* Cada projeto web ocupa toda a largura visível */
 .projetos-web .projeto-card {
     width: 100%;
-    max-width: 100%;
+    max-width: none;
     height: auto;
     position: relative;
     background-color: white;
@@ -578,6 +578,14 @@ i {
     margin-bottom: 20px;
 }
 
+.projetos-web-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+
 .carousel {
   overflow: hidden;
   position: relative;
@@ -599,6 +607,38 @@ i {
   pointer-events: none;
   user-select: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* PROJETOS MOBILE – estilo celular */

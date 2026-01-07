@@ -1,5 +1,6 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +13,10 @@
     <link rel="icon" href="img/logo.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">  
-     
-    <meta name="description" content="Portfólio de Letícia Chiozzi, estudante de ADS com projetos em HTML, CSS, JavaScript e React.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Descrição do site (SEO) -->
+    <meta name="description"
+        content="Portfólio de Letícia Chiozzi, estudante de ADS com projetos em HTML, CSS, JavaScript e React.">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
     <!-- Font Awesome Icons -->
@@ -23,18 +25,22 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
+
 <body>
 
 
-        <nav>
+    <nav>
+        <!-- Logo Letícia_code -->
         <div class="leticiacode-logo">
             <p class="digitando">&lt;Letícia_code/&gt;</p>
         </div>
 
+        <!-- Menu de navegação no mobile -->
         <button class="menu-toggle" aria-label="Abrir menu">
             &#9776;
         </button>
 
+        <!-- Sessões da navbar -->
         <ul>
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#habilidades-aprendendo">Habilidades</a></li>
@@ -42,90 +48,100 @@
             <li><a href="#servicos-form">Serviços</a></li>
             <li><a href="#contato">Contato</a></li>
             <li><a href="Currículo Letícia Vitória.pdf" download target="_blank">Baixar currículo</a></li>
-                <li class="dark-mode-li-mobile">
+            <!-- Dark mode dentro do menu mobile -->
+            <li class="dark-mode-li-mobile">
                 <div class="dark-mode-toggle inside-menu">
                     <input type="checkbox" id="toggle-dark-mode-mobile" />
                     <label for="toggle-dark-mode-mobile">
-                    <span class="icon moon">🌙</span>
-                    <span class="icon sun">☀️</span>
-                    <span class="toggle-ball"></span>
+                        <span class="icon moon">🌙</span>
+                        <span class="icon sun">☀️</span>
+                        <span class="toggle-ball"></span>
                     </label>
                 </div>
-                </li>
+            </li>
 
 
         </ul>
-
+        <!-- Dark mode -->
         <div class="dark-mode-toggle">
             <input type="checkbox" id="toggle-dark-mode" />
             <label for="toggle-dark-mode">
-            <span class="icon moon">🌙</span>
-            <span class="icon sun">☀️</span>
-            <span class="toggle-ball"></span>
+                <span class="icon moon">🌙</span>
+                <span class="icon sun">☀️</span>
+                <span class="toggle-ball"></span>
             </label>
         </div>
-        </nav>
+    </nav>
 
 
-   
-      
-    
+
+
+
     <main>
-      <section id="intro" class="intro" data-aos="fade-up">
-  <div class="intro-content">
-    <h1>Letícia Vitória</h1>
-    <p><span id="typewriter-text"></span></p>
-    <p>Desenvolvedora Front-end focada em criação de sites funcionais e responsivos</p>
-    <p>Criação de sites e landing pages utilizando HTML, CSS, JavaScript, Angular e React.</p>
-    <a href="#projetos" class="btn">Ver Projetos <i class="fa-solid fa-arrow-pointer"></i></a>
+        <!-- Seção de apresentação/introdução -->
+        <section id="intro" class="intro" data-aos="fade-up">
+            <div class="intro-content">
+                <h1>Letícia Vitória</h1>
+                <p><span id="typewriter-text"></span></p>
+                <p>Desenvolvedora Front-end focada em criação de sites funcionais e responsivos</p>
+                <p>Criação de sites e landing pages utilizando HTML, CSS, JavaScript, Angular e React.</p>
+                <a href="#projetos" class="btn">Ver Projetos <i class="fa-solid fa-arrow-pointer"></i></a>
 
-    <!-- CONTATO dentro da intro -->
-    <div class="contato-na-intro">
-      <p class="contato-intro-texto">Entre em contato comigo pelas redes:</p>
-      <div class="contato-box">
-        <div class="contato-box-content">
-          <a href="mailto:chiozzileticia0114@gmail.com" target="_blank" rel="noopener noreferrer">
-            <button><i class="fa-solid fa-envelope"></i></button>
-          </a>
-        </div>
-        <div class="contato-box-content">
-          <a href="https://github.com/chiozzi" target="_blank" rel="noopener noreferrer">
-            <button><i class="fa-brands fa-github"></i></button>
-          </a>
-        </div>
-        <div class="contato-box-content">
-          <a href="https://www.linkedin.com/in/let%C3%ADcia-vit%C3%B3ria-c-197b62250/" target="_blank" rel="noopener noreferrer">
-            <button><i class="fa-brands fa-linkedin"></i></button>
-          </a>
-        </div>
-        <div class="contato-box-content">
-          <a href="https://api.whatsapp.com/send?phone=5511959915556&text=Olá%2C%20Letícia!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank">
-            <button><i class="fa-brands fa-whatsapp"></i></button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+                <!-- Contato dentro da apresentação/introdução -->
+                <div class="contato-na-intro">
+                    <p class="contato-intro-texto">Entre em contato comigo pelas redes:</p>
+                    <div class="contato-box">
+                        <div class="contato-box-content">
+                            <a href="mailto:chiozzileticia0114@gmail.com" target="_blank" rel="noopener noreferrer">
+                                <button><i class="fa-solid fa-envelope"></i></button>
+                            </a>
+                        </div>
+                        <div class="contato-box-content">
+                            <a href="https://github.com/chiozzi" target="_blank" rel="noopener noreferrer">
+                                <button><i class="fa-brands fa-github"></i></button>
+                            </a>
+                        </div>
+                        <div class="contato-box-content">
+                            <a href="https://www.linkedin.com/in/let%C3%ADcia-vit%C3%B3ria-c-197b62250/" target="_blank"
+                                rel="noopener noreferrer">
+                                <button><i class="fa-brands fa-linkedin"></i></button>
+                            </a>
+                        </div>
+                        <div class="contato-box-content">
+                            <a href="https://api.whatsapp.com/send?phone=5511959915556&text=Olá%2C%20Letícia!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                                target="_blank">
+                                <button><i class="fa-brands fa-whatsapp"></i></button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  <div class="img-intro-content">
-    <img src="img/eu.jpg" alt="Letícia Vitória" class="img-intro">
-  </div>
-</section>
-
-    
-
-       <section id="sobre" class="sobre" data-aos="fade-up">
-            <div class="sobre-content">
-                <h1>Sobre</h1>
-                <p>Olá! Me chamo Letícia Vitória, tenho 19 anos e sou estudante de Análise e Desenvolvimento de Sistemas na FATEC, com formação técnica pela ETEC na mesma área.</p>
-                <p>Tenho grande interesse por desenvolvimento web, principalmente front-end, e estou sempre em busca de novos aprendizados e desafios. Já tive contato com tecnologias como HTML, CSS, JavaScript, TypeScript, React, React Native com Expo Angular, Figma e SQL Server.</p>
-                <p>Participei de projetos acadêmicos que me ajudaram a desenvolver minhas habilidades em equipe, organização e resolução de problemas. Meu objetivo é evoluir profissionalmente, construir soluções criativas e contribuir de forma significativa na área de tecnologia.</p>
+            <!-- Minha foto circular -->
+            <div class="img-intro-content">
+                <img src="img/eu.jpg" alt="Letícia Vitória" class="img-intro">
             </div>
         </section>
 
 
-            
-       <section id="habilidades-aprendendo" class="habilidades-aprendendo" data-aos="fade-up">
+        <!-- Sessão sobre -->
+        <section id="sobre" class="sobre" data-aos="fade-up">
+            <div class="sobre-content">
+                <h1>Sobre</h1>
+                <p>Olá! Me chamo Letícia Vitória, tenho 19 anos e sou estudante de Análise e Desenvolvimento de Sistemas
+                    na FATEC, com formação técnica pela ETEC na mesma área.</p>
+                <p>Tenho grande interesse por desenvolvimento web, principalmente front-end, e estou sempre em busca de
+                    novos aprendizados e desafios. Já tive contato com tecnologias como HTML, CSS, JavaScript,
+                    TypeScript, React, React Native com Expo Angular, Figma e SQL Server.</p>
+                <p>Participei de projetos acadêmicos que me ajudaram a desenvolver minhas habilidades em equipe,
+                    organização e resolução de problemas. Meu objetivo é evoluir profissionalmente, construir soluções
+                    criativas e contribuir de forma significativa na área de tecnologia.</p>
+            </div>
+        </section>
+
+
+        <!-- Sessão habilidades -->
+        <section id="habilidades-aprendendo" class="habilidades-aprendendo" data-aos="fade-up">
             <div class="habilidades-content">
                 <h1>Habilidades</h1>
                 <div class="habilidades-icons">
@@ -174,7 +190,7 @@
                     <div class="icone-box">
                         <i class="fa-solid fa-mobile-screen-button"></i>
                         <p>Expo</p>
-                    </div>        
+                    </div>
                     <div class="icone-box">
                         <i class="fa-brands fa-php"></i>
                         <p>PHP</p>
@@ -217,238 +233,294 @@
         </section>
 
 
-       
-        
-       <section id="projetos" class="projetos" data-aos="fade-up">
+
+        <!-- Sessão projetos -->
+        <section class="projetos" data-aos="fade-up">
             <div class="projetos-content">
                 <h1>Projetos</h1>
                 <p>Projetos desenvolvidos durante o curso de Análise e Desenvolvimento de Sistemas.</p>
 
                 <div class="projetos-box">
 
-                <!-- Projetos Web -->
-                <div class="projetos-web">
-                    <h2>Projetos Web</h2>
+                    <!-- Projetos Web -->
+                    <div class="projetos-web">
+                        <h2>Projetos Web</h2>
+
+                        <div class="projetos-web-grid">
 
 
-                    <div class="projeto-card">
-                   <img src="img/projetos/beSafesite.png" alt="beSafe (site)">
-                    <h3>beSafe (site)</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>
-                        Landing page para app de apoio emocional, desenvolvida para organizar
-                        informações, apresentar funcionalidades e guiar o usuário de forma clara
-                        e intuitiva.
-                        </p>
+                            <div class="projeto-card">
+                                <img src="img/projetos/beSafesite.png" alt="beSafe (site)">
+                                <h3>beSafe (site)</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>
+                                        Landing page para app de apoio emocional, desenvolvida para organizar
+                                        informações, apresentar funcionalidades e guiar o usuário de forma clara
+                                        e intuitiva.
+                                    </p>
 
-                        <small>12/2024</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">JavaScript</span>
+                                    <small>12/2024</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">JavaScript</span>
 
-                        </div>
-                        <a href="https://github.com/chiozzi/beSafe_site.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://fabiofjnr.github.io/Site_beSafe/" target="_blank">Ver projeto publicado</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/beSafe_site.git" target="_blank"> 💻 Ver projeto
+                                        no
+                                        GitHub</a>
+                                    <a href="https://fabiofjnr.github.io/Site_beSafe/" target="_blank">Ver projeto
+                                        publicado</a>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/hotel.png" alt="Hotel">
-                    <h3>Hotel</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Sistema de reservas de hotel em Angular com cadastro de hóspedes e reservas, usando backend simulado em JSON.</p>
-                        <small>05/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">JSON</span>
-                        <span class="tec">Bootstrap</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/Hotel.git" target="_blank" rel="noopener noreferrer"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://hotel-git-main-leticia-vitorias-projects.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                            <div class="projeto-card">
+                                <img src="img/projetos/hotel.png" alt="Hotel">
+                                <h3>Hotel</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Sistema de reservas de hotel em Angular com cadastro de hóspedes e reservas,
+                                        usando
+                                        backend simulado em JSON.</p>
+                                    <small>05/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">JSON</span>
+                                        <span class="tec">Bootstrap</span>
+                                        <span class="tec">TypeScript</span>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/Hotel.git" target="_blank"
+                                        rel="noopener noreferrer"> 💻 Ver projeto no GitHub</a>
+                                    <a href="https://hotel-git-main-leticia-vitorias-projects.vercel.app/"
+                                        target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/calculadora.png" alt="Calculadora">
-                    <h3>Calculadora</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Calculadora simples feita em Angular, que realiza operações básicas com interface intuitiva e responsiva, desenvolvida para prática de front-end e TypeScript.</p>
-                        <small>03/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">TypeScript</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/Calculadora.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://calculadora-kappa-jet.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
+                            <div class="projeto-card">
+                                <img src="img/projetos/calculadora.png" alt="Calculadora">
+                                <h3>Calculadora</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Calculadora simples feita em Angular, que realiza operações básicas com interface
+                                        intuitiva e responsiva, desenvolvida para prática de front-end e TypeScript.</p>
+                                    <small>03/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">TypeScript</span>
+                                        <span class="tec">TypeScript</span>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/Calculadora.git" target="_blank"> 💻 Ver projeto
+                                        no
+                                        GitHub</a>
+                                    <a href="https://calculadora-kappa-jet.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
 
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/estudantes.png" alt="Estudantes">
-                    <h3>Estudantes</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Projeto Angular para gerenciamento de estudantes, com dados carregados de arquivos JSON para prática de front-end.</p>
-                        <small>05/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">JSON</span>
-                        <span class="tec">Bootstrap</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/Estudantes.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://estudantes-self.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                            <div class="projeto-card">
+                                <img src="img/projetos/estudantes.png" alt="Estudantes">
+                                <h3>Estudantes</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Projeto Angular para gerenciamento de estudantes, com dados carregados de
+                                        arquivos
+                                        JSON para prática de front-end.</p>
+                                    <small>05/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">JSON</span>
+                                        <span class="tec">Bootstrap</span>
+                                        <span class="tec">TypeScript</span>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/Estudantes.git" target="_blank"> 💻 Ver projeto
+                                        no
+                                        GitHub</a>
+                                    <a href="https://estudantes-self.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        🔗 Ver projeto Demo</a>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/megasena.png" alt="Mega-Sena">
-                    <h3>Mega-Sena</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicação Angular que simula sorteios da Mega-Sena com geração aleatória de números e interface interativa.</p>
-                        <small>03/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/MegaSena.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://mega-sena-one-red.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
+                            <div class="projeto-card">
+                                <img src="img/projetos/megasena.png" alt="Mega-Sena">
+                                <h3>Mega-Sena</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Aplicação Angular que simula sorteios da Mega-Sena com geração aleatória de
+                                        números e
+                                        interface interativa.</p>
+                                    <small>03/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">TypeScript</span>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/MegaSena.git" target="_blank"> 💻 Ver projeto no
+                                        GitHub</a>
+                                    <a href="https://mega-sena-one-red.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
 
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/imc.png" alt="IMC">
-                    <h3>IMC</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicação simples em Angular que calcula o Índice de Massa Corporal (IMC) a partir do peso e altura informados pelo usuário, exibindo a classificação e uma imagem correspondente ao resultado.</p>
-                        <small>03/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">Bootstrap</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/IMC.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://imc-eight-jet.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
+                            <div class="projeto-card">
+                                <img src="img/projetos/imc.png" alt="IMC">
+                                <h3>IMC</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Aplicação simples em Angular que calcula o Índice de Massa Corporal (IMC) a
+                                        partir do
+                                        peso e altura informados pelo usuário, exibindo a classificação e uma imagem
+                                        correspondente ao resultado.</p>
+                                    <small>03/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">Bootstrap</span>
+                                        <span class="tec">TypeScript</span>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/IMC.git" target="_blank"> 💻 Ver projeto no
+                                        GitHub</a>
+                                    <a href="https://imc-eight-jet.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        🔗 Ver projeto Demo</a>
 
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/maiormenornum.png" alt="Maior e Menor">
-                    <h3>Maior e Menor</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicação em Angular que recebe três números inseridos pelo usuário e indica qual é o maior e qual é o menor entre eles, com interface simples e direta para prática de lógica.</p>
-                        <small>03/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">Bootstrap</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/MaiorMenorNum.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://maior-menor-num.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
+                            <div class="projeto-card">
+                                <img src="img/projetos/maiormenornum.png" alt="Maior e Menor">
+                                <h3>Maior e Menor</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Aplicação em Angular que recebe três números inseridos pelo usuário e indica qual
+                                        é o
+                                        maior e qual é o menor entre eles, com interface simples e direta para prática
+                                        de
+                                        lógica.</p>
+                                    <small>03/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">Bootstrap</span>
+                                        <span class="tec">TypeScript</span>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/MaiorMenorNum.git" target="_blank"> 💻 Ver
+                                        projeto
+                                        no GitHub</a>
+                                    <a href="https://maior-menor-num.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        🔗 Ver projeto Demo</a>
 
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/medianotas.png" alt="">
-                    <h3>Média de Notas</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicação em Angular que recebe duas notas de teoria e duas de prática, calcula as médias parciais e a média final, e exibe a classificação do aluno como aprovado, reprovado ou em recuperação.</p>
-                        <small>03/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">Bootstrap</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/MediaNotas.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://media-notas-omega.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
+                            <div class="projeto-card">
+                                <img src="img/projetos/medianotas.png" alt="">
+                                <h3>Média de Notas</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Aplicação em Angular que recebe duas notas de teoria e duas de prática, calcula
+                                        as
+                                        médias parciais e a média final, e exibe a classificação do aluno como aprovado,
+                                        reprovado ou em recuperação.</p>
+                                    <small>03/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">Bootstrap</span>
+                                        <span class="tec">TypeScript</span>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/MediaNotas.git" target="_blank"> 💻 Ver projeto
+                                        no
+                                        GitHub</a>
+                                    <a href="https://media-notas-omega.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
 
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/compras.png" alt="">
-                    <h3>Lista de Compras</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicação em Angular para gerenciamento de uma lista de compras, permitindo adicionar, visualizar e remover itens de forma prática e organizada.</p>
-                        <small>05/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">Bootstrap</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/Compras.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://compras-fawn-psi.vercel.app/lista-compra" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
+                            <div class="projeto-card">
+                                <img src="img/projetos/compras.png" alt="">
+                                <h3>Lista de Compras</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Aplicação em Angular para gerenciamento de uma lista de compras, permitindo
+                                        adicionar, visualizar e remover itens de forma prática e organizada.</p>
+                                    <small>05/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">Bootstrap</span>
+                                        <span class="tec">TypeScript</span>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/Compras.git" target="_blank"> 💻 Ver projeto no
+                                        GitHub</a>
+                                    <a href="https://compras-fawn-psi.vercel.app/lista-compra" target="_blank"
+                                        rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
 
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/organix.png" alt="Organix">
-                    <h3>Organix</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicação web desenvolvida em Angular para auxiliar pessoas que trabalham de forma híbrida a organizar tarefas e projetos. Inspirado em ferramentas como Trello, Teams e Monday, o Organix oferece uma interface simples e intuitiva para gerenciar quadros, listas e atividades, promovendo organização, produtividade e colaboração.</p>
-                        <small>09/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">HTML</span>
-                        <span class="tec">CSS</span>
-                        <span class="tec">Angular</span>
-                        <span class="tec">Bootstrap</span>
-                        <span class="tec">TypeScript</span>
-                        <span class="tec">Banco de dados em breve</span>
+                            <div class="projeto-card">
+                                <img src="img/projetos/organix.png" alt="Organix">
+                                <h3>Organix</h3>
+                                <button class="btn-detalhes">Ver detalhes</button>
+                                <div class="detalhes">
+                                    <p>Aplicação web desenvolvida em Angular para auxiliar pessoas que trabalham de
+                                        forma
+                                        híbrida a organizar tarefas e projetos. Inspirado em ferramentas como Trello,
+                                        Teams
+                                        e Monday, o Organix oferece uma interface simples e intuitiva para gerenciar
+                                        quadros, listas e atividades, promovendo organização, produtividade e
+                                        colaboração.
+                                    </p>
+                                    <small>09/2025</small>
+                                    <div class="tecnologias">
+                                        <span class="tec">HTML</span>
+                                        <span class="tec">CSS</span>
+                                        <span class="tec">Angular</span>
+                                        <span class="tec">Bootstrap</span>
+                                        <span class="tec">TypeScript</span>
+                                        <span class="tec">Banco de dados em breve</span>
 
-                        </div>
-                        <a href="https://github.com/chiozzi/Organix.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://organix-lilac.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
+                                    </div>
+                                    <a href="https://github.com/chiozzi/Organix.git" target="_blank"> 💻 Ver projeto no
+                                        GitHub</a>
+                                    <a href="https://organix-lilac.vercel.app/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        🔗 Ver projeto Demo</a>
 
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
+                                    <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                                </div>
+                            </div>
 
-                
 
-                    <!--
+
+                            <!--
                     <div class="projeto-card">
                     <img src="" alt="">
                     <h3></h3>
@@ -469,161 +541,211 @@
                     </div>
                     </div>
                     -->
+                    </div>
 
+                    </div>
 
-                </div>
+                    <!-- Projetos Mobile -->
+                    <div class="projetos-mobile">
+                        <h2>Projetos Mobile</h2>
 
-                <!-- Projetos Mobile -->
-                <div class="projetos-mobile">
-                    <h2>Projetos Mobile</h2>
+                        <div class="projeto-card">
+                            <img src="img/projetos/beSafeapp.png" alt="beSafe">
+                            <h3>beSafe (app)</h3>
+                            <button class="btn-detalhes">Ver detalhes</button>
+                            <div class="detalhes">
+                                <p>Rede social de apoio emocional que permite desabafos anônimos, enquetes e acesso
+                                    a
+                                    ajuda profissional, promovendo acolhimento e empatia.</p>
+                                <small>12/2024</small>
+                                <div class="tecnologias">
+                                    <span class="tec">JavaScript</span>
+                                    <span class="tec">React</span>
+                                    <span class="tec">JSON</span>
+                                    <span class="tec">Expo</span>
+                                    <span class="tec">API</span>
+                                </div>
+                                <a href="https://github.com/chiozzi/beSafe_app.git" target="_blank"> 💻 Ver projeto
+                                    no
+                                    GitHub</a>
+                                <a href="https://dist-opal-eta.vercel.app/" target="_blank"> 🔗 Ver projeto Demo</a>
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/beSafeapp.png" alt="beSafe">
-                    <h3>beSafe (app)</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Rede social de apoio emocional que permite desabafos anônimos, enquetes e acesso a ajuda profissional, promovendo acolhimento e empatia.</p>
-                        <small>12/2024</small>
-                        <div class="tecnologias">
-                        <span class="tec">JavaScript</span>
-                        <span class="tec">React</span>
-                        <span class="tec">JSON</span>
-                        <span class="tec">Expo</span>
-                        <span class="tec">API</span>
+                                <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                            </div>
                         </div>
-                        <a href="https://github.com/chiozzi/beSafe_app.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://dist-opal-eta.vercel.app/" target="_blank"> 🔗 Ver projeto Demo</a>
-
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
 
 
-                    <div class="projeto-card">
-                    <img src="img/projetos/brigo.le.png" alt="brigo.le">
-                    <h3>brigo.le</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>O brigo.le é um app simples e prático para facilitar a venda de brigadeiros gourmet feitos com carinho. Nele, os clientes podem ver os sabores disponíveis, montar o pedido e enviá-lo direto pelo app, enquanto os administradores acompanham e gerenciam os pedidos em tempo real.</p>
-                        <small>06/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">Expo</span>
-                        <span class="tec">React</span>
-                        <span class="tec">TypeScript</span>
+                        <div class="projeto-card">
+                            <img src="img/projetos/brigo.le.png" alt="brigo.le">
+                            <h3>brigo.le</h3>
+                            <button class="btn-detalhes">Ver detalhes</button>
+                            <div class="detalhes">
+                                <p>O brigo.le é um app simples e prático para facilitar a venda de brigadeiros
+                                    gourmet
+                                    feitos com carinho. Nele, os clientes podem ver os sabores disponíveis, montar o
+                                    pedido e enviá-lo direto pelo app, enquanto os administradores acompanham e
+                                    gerenciam os pedidos em tempo real.</p>
+                                <small>06/2025</small>
+                                <div class="tecnologias">
+                                    <span class="tec">Expo</span>
+                                    <span class="tec">React</span>
+                                    <span class="tec">TypeScript</span>
+                                </div>
+                                <a href="https://github.com/chiozzi/brigo-le.git" target="_blank"> 💻 Ver projeto no
+                                    GitHub</a>
+                                <a href="https://brigo-le.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗
+                                    Ver
+                                    projeto Demo</a>
+                                <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                            </div>
                         </div>
-                        <a href="https://github.com/chiozzi/brigo-le.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://brigo-le.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
-        
-                    
-                    <div class="projeto-card">
-                    <img src="img/projetos/templates.png" alt="Templates Expo ">
-                    <h3>Templates Expo</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Conjunto de templates prontos para React Native com Expo, criados para acelerar o desenvolvimento de aplicativos móveis. Inclui exemplos de navegação, telas personalizadas e componentes reutilizáveis, servindo como base para novos projetos.</p>
-                        <small>07/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">Expo</span>
-                        <span class="tec">React</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/Templates_expo.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="https://templates-expo.vercel.app/" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
-                
-             
-
-                    <div class="projeto-card">
-                    <img src="img/projetos/chic'ozzi.png" alt="Chic'ozzi">
-                    <h3>Chic'ozzi</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Loja de roupas feita no Figma.</p>
-                        <small>04/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">Figma</span>
-                        </div>
-                        <a href="https://www.figma.com/design/arStytnFKlobbqGTuZmfC3/E-commerce?node-id=0-1&t=G9Fytea61davyfqM-1" target="_blank"> 🎨 Ver projeto no Figma</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
-                    
-                    <div class="projeto-card">
-                    <img src="img/projetos/chiozza.png" alt="Chiozza">
-                    <h3>Chiozza</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Pizzaria feita no Figma, design moderno e responsivo.</p>
-                        <small>04/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">Figma</span>
-                        </div>
-                        <a href="https://www.figma.com/design/K6AU89A62lOMSWChbHaghQ/Pizzaria?node-id=0-1&t=Apobfhk3p6mGPh82-1" target="_blank"> 🎨 Ver projeto no Figma</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
-
-                    <div class="projeto-card">
-                    <img src="img/projetos/provateste1.png" alt="Prova Teste Expo">
-                    <h3>Prova Teste Expo</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicativo mobile desenvolvido com React Native e Expo, contendo três páginas: A, B e C. Permite navegação entre as telas, exibe uma imagem na página A, informações de usuário na página B e, na página C, consome uma API de fatos aleatórios, mostrando os dados de forma clara e organizada, com loading enquanto os dados são carregados.</p>
-                        <small>07/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">Expo</span>
-                        <span class="tec">React</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/ProvaTesteExpo.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo (indisponível)</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>  
-                    </div>
-
-                    <div class="projeto-card">
-                    <img src="img/projetos/provateste2.png" alt="Prova Teste Expo 2">
-                    <h3>Prova Teste Expo 2</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicativo desenvolvido com React Native e Expo, criado como parte de uma prova prática. O app consome a API pública <em>The Cat API</em> para exibir fotos de gatos, listando-as na tela inicial e permitindo visualizar detalhes de cada item. Inclui navegação entre telas, indicador de carregamento durante requisições e tratamento de erros de forma amigável.</p>
-                        <small>08/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">Expo</span>
-                        <span class="tec">React</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/ProvaTesteExpo2.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo (indisponível)</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
-
-                    <div class="projeto-card">
-                    <img src="img/projetos/provatudo.png" alt="Prova Teste Tudo"> <!-- provachatteste -->
-                    <h3>Prova Teste Tudo</h3>
-                    <button class="btn-detalhes">Ver detalhes</button>
-                    <div class="detalhes">
-                        <p>Aplicativo mobile desenvolvido com React Native e Expo, apresentando uma tela inicial com navegação clara para diferentes módulos: Início, Quiz de Filmes, Lista de Livros, Clima, Favoritos e Timer. O app combina interatividade e organização, permitindo ao usuário acessar diversas funcionalidades em um único ambiente. Inclui consumo de APIs para informações dinâmicas, exibição de dados de forma limpa, indicadores de carregamento durante requisições e tratamento de erros, proporcionando uma experiência fluida e intuitiva.</p>
-                        <small>08/2025</small>
-                        <div class="tecnologias">
-                        <span class="tec">Expo</span>
-                        <span class="tec">React</span>
-                        <span class="tec">TypeScript</span>
-                        </div>
-                        <a href="https://github.com/chiozzi/ProvaTesteTudo.git" target="_blank"> 💻 Ver projeto no GitHub</a>
-                        <a href="" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo (indisponível)</a>
-                        <button class="btn-fechar-detalhes">Fechar detalhes</button>
-                    </div>
-                    </div>
 
 
-               <!--
+                        <div class="projeto-card">
+                            <img src="img/projetos/templates.png" alt="Templates Expo ">
+                            <h3>Templates Expo</h3>
+                            <button class="btn-detalhes">Ver detalhes</button>
+                            <div class="detalhes">
+                                <p>Conjunto de templates prontos para React Native com Expo, criados para acelerar o
+                                    desenvolvimento de aplicativos móveis. Inclui exemplos de navegação, telas
+                                    personalizadas e componentes reutilizáveis, servindo como base para novos
+                                    projetos.
+                                </p>
+                                <small>07/2025</small>
+                                <div class="tecnologias">
+                                    <span class="tec">Expo</span>
+                                    <span class="tec">React</span>
+                                    <span class="tec">TypeScript</span>
+                                </div>
+                                <a href="https://github.com/chiozzi/Templates_expo.git" target="_blank"> 💻 Ver
+                                    projeto
+                                    no GitHub</a>
+                                <a href="https://templates-expo.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                    🔗 Ver projeto Demo</a>
+                                <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                            </div>
+                        </div>
+
+
+
+                        <div class="projeto-card">
+                            <img src="img/projetos/chic'ozzi.png" alt="Chic'ozzi">
+                            <h3>Chic'ozzi</h3>
+                            <button class="btn-detalhes">Ver detalhes</button>
+                            <div class="detalhes">
+                                <p>Loja de roupas feita no Figma.</p>
+                                <small>04/2025</small>
+                                <div class="tecnologias">
+                                    <span class="tec">Figma</span>
+                                </div>
+                                <a href="https://www.figma.com/design/arStytnFKlobbqGTuZmfC3/E-commerce?node-id=0-1&t=G9Fytea61davyfqM-1"
+                                    target="_blank"> 🎨 Ver projeto no Figma</a>
+                                <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <img src="img/projetos/chiozza.png" alt="Chiozza">
+                            <h3>Chiozza</h3>
+                            <button class="btn-detalhes">Ver detalhes</button>
+                            <div class="detalhes">
+                                <p>Pizzaria feita no Figma, design moderno e responsivo.</p>
+                                <small>04/2025</small>
+                                <div class="tecnologias">
+                                    <span class="tec">Figma</span>
+                                </div>
+                                <a href="https://www.figma.com/design/K6AU89A62lOMSWChbHaghQ/Pizzaria?node-id=0-1&t=Apobfhk3p6mGPh82-1"
+                                    target="_blank"> 🎨 Ver projeto no Figma</a>
+                                <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <img src="img/projetos/provateste1.png" alt="Prova Teste Expo">
+                            <h3>Prova Teste Expo</h3>
+                            <button class="btn-detalhes">Ver detalhes</button>
+                            <div class="detalhes">
+                                <p>Aplicativo mobile desenvolvido com React Native e Expo, contendo três páginas: A,
+                                    B e
+                                    C. Permite navegação entre as telas, exibe uma imagem na página A, informações
+                                    de
+                                    usuário na página B e, na página C, consome uma API de fatos aleatórios,
+                                    mostrando
+                                    os dados de forma clara e organizada, com loading enquanto os dados são
+                                    carregados.
+                                </p>
+                                <small>07/2025</small>
+                                <div class="tecnologias">
+                                    <span class="tec">Expo</span>
+                                    <span class="tec">React</span>
+                                    <span class="tec">TypeScript</span>
+                                </div>
+                                <a href="https://github.com/chiozzi/ProvaTesteExpo.git" target="_blank"> 💻 Ver
+                                    projeto
+                                    no GitHub</a>
+                                <a href="" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo
+                                    (indisponível)</a>
+                                <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <img src="img/projetos/provateste2.png" alt="Prova Teste Expo 2">
+                            <h3>Prova Teste Expo 2</h3>
+                            <button class="btn-detalhes">Ver detalhes</button>
+                            <div class="detalhes">
+                                <p>Aplicativo desenvolvido com React Native e Expo, criado como parte de uma prova
+                                    prática. O app consome a API pública <em>The Cat API</em> para exibir fotos de
+                                    gatos, listando-as na tela inicial e permitindo visualizar detalhes de cada
+                                    item.
+                                    Inclui navegação entre telas, indicador de carregamento durante requisições e
+                                    tratamento de erros de forma amigável.</p>
+                                <small>08/2025</small>
+                                <div class="tecnologias">
+                                    <span class="tec">Expo</span>
+                                    <span class="tec">React</span>
+                                    <span class="tec">TypeScript</span>
+                                </div>
+                                <a href="https://github.com/chiozzi/ProvaTesteExpo2.git" target="_blank"> 💻 Ver
+                                    projeto
+                                    no GitHub</a>
+                                <a href="" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo
+                                    (indisponível)</a>
+                                <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                            </div>
+                        </div>
+
+                        <div class="projeto-card">
+                            <img src="img/projetos/provatudo.png" alt="Prova Teste Tudo"> <!-- provachatteste -->
+                            <h3>Prova Teste Tudo</h3>
+                            <button class="btn-detalhes">Ver detalhes</button>
+                            <div class="detalhes">
+                                <p>Aplicativo mobile desenvolvido com React Native e Expo, apresentando uma tela
+                                    inicial
+                                    com navegação clara para diferentes módulos: Início, Quiz de Filmes, Lista de
+                                    Livros, Clima, Favoritos e Timer. O app combina interatividade e organização,
+                                    permitindo ao usuário acessar diversas funcionalidades em um único ambiente.
+                                    Inclui
+                                    consumo de APIs para informações dinâmicas, exibição de dados de forma limpa,
+                                    indicadores de carregamento durante requisições e tratamento de erros,
+                                    proporcionando uma experiência fluida e intuitiva.</p>
+                                <small>08/2025</small>
+                                <div class="tecnologias">
+                                    <span class="tec">Expo</span>
+                                    <span class="tec">React</span>
+                                    <span class="tec">TypeScript</span>
+                                </div>
+                                <a href="https://github.com/chiozzi/ProvaTesteTudo.git" target="_blank"> 💻 Ver
+                                    projeto
+                                    no GitHub</a>
+                                <a href="" target="_blank" rel="noopener noreferrer"> 🔗 Ver projeto Demo
+                                    (indisponível)</a>
+                                <button class="btn-fechar-detalhes">Fechar detalhes</button>
+                            </div>
+                        </div>
+
+
+                        <!--
                     <div class="projeto-card">
                     <img src="" alt="">
                     <h3></h3>
@@ -641,64 +763,72 @@
                     </div>
                     </div>
                 -->
-                   
-                
 
-                </div>
+
+
+                    </div>
                 </div>
             </div>
         </section>
 
 
 
-        <!-- SERVIÇOS -->
+        <!-- Sessão serviços -->
         <section id="servicos-form" class="servicos-form" data-aos="fade-up">
-        
+
             <div class="servicos">
-            <h1>O que eu posso fazer por você</h1>
+                <h1>O que eu posso fazer por você</h1>
 
-            <ul>
-                <li><strong>Desenvolvimento Web Front-end:</strong> criação de interfaces responsivas com HTML, CSS, JavaScript, Angular e Bootstrap.</li>
-                <li><strong>UX/UI e prototipagem:</strong> criação de telas no Figma, priorizando usabilidade, acessibilidade e experiência do usuário.</li>
-                <li><strong>Landing pages:</strong> páginas otimizadas para conversão, ideais para divulgar produtos e serviços.</li>
-                <li><strong>Integração com APIs:</strong> consumo, simulação com JSON Server e organização de dados no front-end.</li>
-                <li><strong>Back-end com Java:</strong> desenvolvimento de APIs com Spring Boot, JPA e uso de DTOs.</li>
-                <li><strong>Organização de processos:</strong> criação de planilhas e ferramentas para controle e produtividade.</li>
-                <li><strong>Manutenção e melhorias:</strong> correções, refatoração e evolução de projetos web existentes.</li>
-                <li><strong>Visão de negócio:</strong> compreensão das necessidades do cliente e proposta de soluções práticas.</li>
-            </ul>
+                <ul>
+                    <li><strong>Desenvolvimento Web Front-end:</strong> criação de interfaces responsivas com HTML, CSS,
+                        JavaScript, Angular e Bootstrap.</li>
+                    <li><strong>UX/UI e prototipagem:</strong> criação de telas no Figma, priorizando usabilidade,
+                        acessibilidade e experiência do usuário.</li>
+                    <li><strong>Landing pages:</strong> páginas otimizadas para conversão, ideais para divulgar produtos
+                        e serviços.</li>
+                    <li><strong>Integração com APIs:</strong> consumo, simulação com JSON Server e organização de dados
+                        no front-end.</li>
+                    <li><strong>Back-end com Java:</strong> desenvolvimento de APIs com Spring Boot, JPA e uso de DTOs.
+                    </li>
+                    <li><strong>Organização de processos:</strong> criação de planilhas e ferramentas para controle e
+                        produtividade.</li>
+                    <li><strong>Manutenção e melhorias:</strong> correções, refatoração e evolução de projetos web
+                        existentes.</li>
+                    <li><strong>Visão de negócio:</strong> compreensão das necessidades do cliente e proposta de
+                        soluções práticas.</li>
+                </ul>
             </div>
 
 
-            <!-- FORMULÁRIO -->
+            <!-- Sessão formulário -->
             <div class="formulario">
-            <div class="form-card">
-                <h1>Me envie uma mensagem</h1>
+                <div class="form-card">
+                    <h1>Me envie uma mensagem</h1>
 
-                <form action="https://formsubmit.co/chiozzileticia0114@gmail.com" method="POST">
+                    <form action="https://formsubmit.co/chiozzileticia0114@gmail.com" method="POST">
 
-                <!-- CAMPOS VISÍVEIS -->
-                <input type="text" name="name" placeholder="Seu nome" required>
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
+                        <!-- CAMPOS VISÍVEIS -->
+                        <input type="text" name="name" placeholder="Seu nome" required>
+                        <input type="email" name="email" placeholder="Seu e-mail" required>
+                        <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
 
-                <!-- CONFIGURAÇÕES IMPORTANTES -->
-                <!-- assunto do e-mail -->
-                <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
+                        <!-- CONFIGURAÇÕES IMPORTANTES -->
+                        <!-- assunto do e-mail -->
+                        <input type="hidden" name="_subject" value="Novo contato pelo portfólio">
 
-                <!-- redireciona para página de obrigado (troque para sua URL) -->
-                <input type="hidden" name="_next" value="https://seu-site.com/obrigado.html">
+                        <!-- redireciona para página de obrigado (troque para sua URL) -->
+                        <input type="hidden" name="_next" value="https://seu-site.com/obrigado.html">
 
-                <!-- desativa captcha (opcional) -->
-                <input type="hidden" name="_captcha" value="false">
+                        <!-- desativa captcha (opcional) -->
+                        <input type="hidden" name="_captcha" value="false">
 
-                <!-- antispam -->
-                <input type="text" name="_honey" style="display:none">
+                        <!-- antispam -->
+                        <input type="text" name="_honey" style="display:none">
 
-                <button type="submit">Enviar</button>
-                </form>
+                        <button type="submit">Enviar</button>
+                    </form>
 
-            </div>
+                </div>
             </div>
 
         </section>
@@ -706,14 +836,15 @@
 
 
 
-
+        <!-- Sessão contato -->
         <section id="contato" class="contato" data-aos="fade-up">
-            <div  class="contato-content">
+            <div class="contato-content">
                 <h1>Contato</h1>
-                <p>Entre em contato comigo pelas redes:</p>   
+                <p>Entre em contato comigo pelas redes:</p>
                 <div class="contato-box">
                     <div class="contato-box-content">
-                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiozzileticia0114@gmail.com" target="_blank" rel="noopener noreferrer">
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiozzileticia0114@gmail.com"
+                            target="_blank" rel="noopener noreferrer">
                             <button><i class="fa-solid fa-envelope"></i></button>
                         </a>
 
@@ -726,13 +857,15 @@
                     </div>
 
                     <div class="contato-box-content">
-                        <a href="https://www.linkedin.com/in/let%C3%ADcia-vit%C3%B3ria-c-197b62250/" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/let%C3%ADcia-vit%C3%B3ria-c-197b62250/" target="_blank"
+                            rel="noopener noreferrer">
                             <button><i class="fa-brands fa-linkedin"></i></button>
                         </a>
                     </div>
 
                     <div class="contato-box-content">
-                        <a href="https://api.whatsapp.com/send?phone=5511959915556&text=Olá%2C%20Letícia!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar." target="_blank">
+                        <a href="https://api.whatsapp.com/send?phone=5511959915556&text=Olá%2C%20Letícia!%20Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar."
+                            target="_blank">
                             <button><i class="fa-brands fa-whatsapp"></i></button>
                         </a>
                     </div>
@@ -743,15 +876,15 @@
         </section>
 
 
-        
+
 
 
     </main>
 
     <!-- Botão voltar ao topo -->
-        <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">
+    <button onclick="scrollToTop()" id="btnTopo" title="Voltar ao topo">
         <i class="fa-solid fa-arrow-up" id="iconetopo"></i>
-        </button>
+    </button>
 
 
 
@@ -761,14 +894,15 @@
 
 
 
-    <!-- JavaScript file -->
+    <!-- JavaScript  -->
     <script src="script/script.js"></script>
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-    AOS.init();
+        AOS.init();
     </script>
 
-    
+
 </body>
+
 </html>
