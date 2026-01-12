@@ -103,23 +103,23 @@ function iniciarMenuHamburguer() {
   });
 }
 
-
 // 📦 DETALHES DOS PROJETOS
 function configurarDetalhesProjetos() {
   document.querySelectorAll('.btn-detalhes').forEach(botao => {
     botao.addEventListener('click', () => {
       const card = botao.closest('.projeto-card');
-      card.classList.add('ativo');
+      card.classList.add('aberto');
     });
   });
 
   document.querySelectorAll('.btn-fechar-detalhes').forEach(botao => {
     botao.addEventListener('click', () => {
       const card = botao.closest('.projeto-card');
-      card.classList.remove('ativo');
+      card.classList.remove('aberto');
     });
   });
 }
+
 
 
 // 🔝 BOTÃO VOLTAR AO TOPO

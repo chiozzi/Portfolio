@@ -1,4 +1,4 @@
-
+/* variáveis de cores */
 :root {
   --purple-dark: #4b136d;
   --purple-medium: #66056d;
@@ -9,13 +9,14 @@
   --shadow-soft: rgba(102, 5, 109, 0.3);
 }
 
+/* scroll suave */
 html {
     scroll-behavior: smooth;
 }
 
 
 
-
+/* estilo global */
 body {
     font-family: Comfortaa, sans-serif;
     margin: 0;
@@ -24,15 +25,8 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;          
 }
 
-#sobre,
-#habilidades-aprendendo,
-#projetos,
-#contato,
-#servicos-form {
-  scroll-margin-top: 80px; /* altura da navbar */
-}
 
-
+/*------------------------------------------------------------------------------------------------------*/
 
 
 /* NAV BAR */
@@ -41,23 +35,20 @@ nav {
     justify-content: space-between;
     background-color: #66056d;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
     width: 100%;
     z-index: 10;
     align-items: center;
     height: 80px;
     padding: 0 30px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3); /* sombra suave */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: background-color 0.3s ease;
 }
 
 /* logo da nav */
-.leticiacode-logo {
+.leticiacode-logo-nav {
     display: flex;
     align-items: center;
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 900;
     color: #fff;
     margin-left: 10px;
@@ -66,13 +57,10 @@ nav {
     text-shadow: 0 0 5px #d3a1d3;
 }
 
-/* texto da logo da nav */
-.leticiacode-logo p {
-    font-size: 32px;
-    color: white;
-    margin: 0;
-    font-weight: 700;
-}
+/* botão do menu no responsivo */
+.menu-toggle {
+  display: none; /* só aparece no responsivo */
+}  
 
 /* links da nav */
 nav ul {
@@ -94,37 +82,18 @@ nav ul li {
     font-size: 20px;
     font-weight: 600;
     cursor: pointer;
+    color: white;
 }
 
-/* hover item nav */
+/* hover cada item da nav */
 nav ul li:hover {
     background-color: #b866be;
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(184, 102, 190, 0.4);
 }
 
-/* texto dos links */
-nav ul li a {
-    text-decoration: underline;
-    color: white;
-    font-weight: 700;
-    transition: color 0.3s ease;
-}
 
-nav ul li a:hover {
-    color: #ffe6ff;
-}
-
-.menu-toggle {
-  display: none; /* só aparece no responsivo */
-}    
-
-
-.dark-mode-toggle.inside-menu {
-    display: none;
-  }
-
-/* BOTÃO MODO ESCURO */
+/* botão modo escuro */
 .dark-mode-toggle {
     position: static;
     background: none;
@@ -137,17 +106,12 @@ nav ul li a:hover {
     margin-right: 55px;
 }
 
-body.dark-mode #toggle-dark-mode {
-    color: #f0f0f0;
-}
-
-
-/* Esconde o checkbox */
+/* esconde o checkbox */
 .dark-mode-toggle input {
     display: none;
 }
 
-/* Estilo do "slider" (label) */
+/* estilo do "slider" (label) */
 .dark-mode-toggle label {
     cursor: pointer;
     width: 60px;
@@ -164,7 +128,7 @@ body.dark-mode #toggle-dark-mode {
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
 }
 
-/* Ícones */
+/* ícones sol e lua*/
 .dark-mode-toggle .icon {
     font-size: 18px;
     user-select: none;
@@ -174,7 +138,7 @@ body.dark-mode #toggle-dark-mode {
     margin: 0 -3px;
 }
 
-/* Bola do toggle */
+/* bola do toggle */
 .dark-mode-toggle .toggle-ball {
     position: absolute;
     top: 3px;
@@ -187,27 +151,30 @@ body.dark-mode #toggle-dark-mode {
     box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* Estado ativo: checkbox marcado */
+/* estado ativo: checkbox marcado */
 .dark-mode-toggle input:checked + label {
     background-color: #66056d;
     color: #f0f0f0;
 }
 
-/* Move a bolinha */
+/* move a bolinha */
 .dark-mode-toggle input:checked + label .toggle-ball {
     transform: translateX(30px);
 }
 
-/* Cores dos ícones conforme estado */
+/* cores dos ícones conforme estado 1 */
 .dark-mode-toggle input:checked + label .moon {
     color: #f0f0f0;
 }
 
+/* cores dos ícones conforme estado 2 */
 .dark-mode-toggle input:not(:checked) + label .sun {
     color: #999;
 }
 
 
+
+/*------------------------------------------------------------------------------------------------------*/
 
 /* SESSÃO INTRO */
 .intro {
@@ -229,7 +196,7 @@ body.dark-mode #toggle-dark-mode {
     text-align: center;
 }
 
-/*titulo da sessão intro */
+/* titulo Letícia Vitória da sessão intro */
 .intro-content h1 {
     font-size: 48px;
     color: #dbb3df;
@@ -239,14 +206,14 @@ body.dark-mode #toggle-dark-mode {
 
 }
 
-/* texto da sessão intro */
+/* textos pequenos da sessão intro */
 .intro-content p {
     font-size: 22x;
     color: white;
 }
 
-/* botão da sessão intro */
-.btn {
+/* botão ver projetos da sessão intro */
+.btn-verprojetos {
     text-decoration: underline;
     color: #dbb3df;
     font-weight: 700;
@@ -260,20 +227,20 @@ body.dark-mode #toggle-dark-mode {
 }
 
 
-.btn:hover {
+.btn-verprojetos:hover {
     background-color: #a351a2;
     transform: scale(1.05);
     box-shadow: 0 6px 14px rgba(184, 102, 190, 0.6);
 }
 
-/* ícone so mouse */
-i {
+/* ícone do mouse */
+.icon-mouse {
     margin-left: 7px;
 }
 
 
 
-/* Estilo para contatos na intro */
+/* contatos */
 .contato-na-intro {
   margin-top: 40px;
   padding: 20px;
@@ -285,12 +252,14 @@ i {
   max-width: 100%;
 }
 
+/* titulo da sessão contatos */
 .contato-intro-texto {
   font-size: 1.1rem;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
+/* box dos contatos */
 .contato-na-intro .contato-box {
   display: flex;
   justify-content: center;
@@ -299,11 +268,13 @@ i {
   margin-top: 10px;
 }
 
+/* cada caixinha dos contatos */
 .contato-na-intro .contato-box-content {
   width: 100px;
   height: 100px;
 }
 
+/* cada botão dos contatos */
 .contato-na-intro .contato-box-content button {
   width: 70px;
   height: 70px;
@@ -320,21 +291,22 @@ i {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
+/* hover cada botão dos contatos */
 .contato-na-intro .contato-box-content button:hover {
   transform: translateY(-10px);
   background-color: #8a3790;
 }
 
+/* cada ícone dos contatos */
 .contato-na-intro .contato-box-content button i {
   font-size: 40px;
 }
 
+/* remove sublinhado dos links dos contatos */
 .contato-na-intro .contato-box-content a {
   text-decoration: none;
   outline: none;
 }
-
-
 
 
 
@@ -355,9 +327,15 @@ i {
     transition: transform 0.4s ease;
 }
 
+/* hover imagem da sessão intro */
 .img-intro:hover {
     transform: scale(1.08);
 }
+
+
+/*------------------------------------------------------------------------------------------------------*/
+
+
 
 /* SESSÃO SOBRE */
 .sobre {
@@ -374,11 +352,12 @@ i {
 }
 
 
-/* texto de sobre */
+/* texto da sessão sobre */
 .sobre-content {
     flex: 1;
     text-align: center;
 }
+
 /* titulo de sobre */
 .sobre-content h1 {
     font-size: 40px;
@@ -396,6 +375,9 @@ i {
 }
 
 
+/*------------------------------------------------------------------------------------------------------*/
+
+
 /* SESSÃO HABILIDADES */
 .habilidades-aprendendo {
   display: flex;
@@ -410,13 +392,14 @@ i {
   box-shadow: 0 8px 25px var(--shadow-soft);
 }
 
+/* conteúdo de habilidades e aprendendo */
 .habilidades-content,
 .aprendendo-content {
   flex: 1 1 300px;
   text-align: center;
 }
 
-
+/* títulos de habilidades e aprendendo */
 .habilidades-content h1,
 .aprendendo-content h1 {
   font-size: 40px;
@@ -426,6 +409,7 @@ i {
 
 }
 
+/* container dos ícones */
 .habilidades-icons,
 .aprendendo-icons {
   display: flex;
@@ -434,6 +418,7 @@ i {
   gap: 25px;
 }
 
+/* cada caixinha de ícone */
 .icone-box {
   display: flex;
   flex-direction: column;
@@ -450,11 +435,13 @@ i {
   cursor: default;
 }
 
+/* hover cada caixinha de ícone */
 .icone-box:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(102, 5, 109, 0.6);
 }
 
+/* cada ícone dentro da caixinha */
 .icone-box i {
     font-size: 40px;
     margin-bottom: 10px;
@@ -465,6 +452,7 @@ i {
 
 }
 
+/* nome de cada habilidade/aprendizado */
 .icone-box p {
   font-weight: bold;
   font-size: 1.1rem;
@@ -472,13 +460,7 @@ i {
 }
 
 
-
-
-
-
-
-
-
+/*------------------------------------------------------------------------------------------------------*/
 
 
 /* SESSÃO PROJETOS */
@@ -489,16 +471,18 @@ i {
     align-items: center;
     margin: 50px auto;
     padding: 20px;
-    background--color: #510357;
+    background-color: #510357;
     border-radius: 10px;
     box-shadow: 0 8px 24px rgba(102, 5, 109, 0.5);
     width: 85%;
 }
 
+/* conteúdo da sessão projetos */
 .projetos-content {
     text-align: center;
 }
 
+/* titulo da sessão projetos */
 .projetos-content h1 {
     font-size: 40px;
     color: white;
@@ -507,6 +491,7 @@ i {
     text-transform: uppercase;
 }
 
+/* titulo de cada projeto */
 .projeto-card h3 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -514,14 +499,14 @@ i {
   font-weight: bold;
 }
 
-
+/* texto detalhe de cada projeto */
 .projetos-content p {
     font-size: 18px;
     color: white;
     margin-bottom: 30px;
 }
 
-/* Container principal */
+/* box que contém todos os projetos */
 .projetos-box {
     display: flex;
     flex-direction: column;
@@ -529,119 +514,95 @@ i {
     padding: 40px 20px;
 }
 
-/* PROJETOS WEB – ocupam a tela inteira */
+
+/*-----------------------------------------------------*/
+
+/* ===================== */
+/* PROJETOS WEB - GRID RESPONSIVO */
+/* ===================== */
+
 .projetos-web {
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 60px;
+    margin-top: 40px;
+    width: 100%;
 }
 
-
+/* título */
 .projetos-web h2 {
-    align-self: center;
+    grid-column: 1 / -1;
+    text-align: center;
     color: white;
     font-size: 30px;
-    margin-bottom: 10px;
     text-decoration: underline;
-}
-
-/* Cada projeto web ocupa toda a largura visível */
-.projetos-web .projeto-card {
-    width: 100%;
-    max-width: none;
-    height: auto;
-    position: relative;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 6px 16px rgba(102, 5, 109, 0.3);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
-    padding: 20px;
-    scroll-snap-align: start;
-}
-
-.projetos-web .projeto-card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 14px 30px rgba(102, 5, 109, 0.6);
-}
-
-.projetos-web .projeto-card img {
-    width: 100%;
-    max-height: auto;
-    object-fit: contain;
-    border-radius: 12px;
     margin-bottom: 20px;
 }
 
-.projetos-web-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+/* card */
+.projeto-web-card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 6px 16px rgba(102, 5, 109, 0.3);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+}
+
+/* hover */
+.projeto-web-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 30px rgba(102, 5, 109, 0.6);
+}
+
+/* ===================== */
+/* MOCKUP COMPUTADOR */
+/* ===================== */
+
+.mockup-web {
+    background-color: #1e1e1e;
+    border-radius: 14px;
+    padding: 12px;
+    margin-bottom: 16px;
+    box-shadow:
+        inset 0 0 0 2px #444,
+        0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* imagem responsiva real */
+.mockup-web img {
     width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    border-radius: 6px;
+    display: block;
+}
+
+/* ===================== */
+/* DETALHES (overlay) */
+/* ===================== */
+
+.projeto-web-card .detalhes {
+    border-radius: 20px;
+}
+
+/* ===================== */
+/* RESPONSIVO FINO */
+/* ===================== */
+
+@media (max-width: 480px) {
+    .projetos-web {
+        grid-template-columns: 1fr;
+    }
 }
 
 
-.carousel {
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  border-radius: 10px;
-  touch-action: pan-y;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.4s ease;
-  max-height: 400px;
-  object-fit: cover;
-}
-
-.carousel-track img {
-  width: 100%;
-  flex-shrink: 0;
-  pointer-events: none;
-  user-select: none;
-}
+/*-----------------------------------------------------*/
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* PROJETOS MOBILE – estilo celular */
+/* projetos mobile – estilo celular */
 .projetos-mobile {
     display: flex;
     flex-direction: row;
@@ -651,7 +612,7 @@ i {
     align-items: flex-start;
 }
 
-/* titulos projetos web | projetos mobile */
+/* titulo projetos mobile */
 .projetos-mobile h2 {
     width: 100%;
     margin-bottom: 10px;
@@ -661,6 +622,7 @@ i {
     text-decoration: underline;
 }
 
+/* cada card de projeto mobile */
 .projetos-mobile .projeto-card {
     flex: 0 1 360px;
     background-color: white;
@@ -672,11 +634,13 @@ i {
     padding: 20px;
 }
 
+/* hover cada card de projeto mobile */
 .projetos-mobile .projeto-card:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0 14px 30px rgba(102, 5, 109, 0.6);
 }
 
+/* imagem de cada projeto mobile */
 .projetos-mobile .projeto-card img {
     width: 100%;
     height: auto;
@@ -684,7 +648,11 @@ i {
     margin-bottom: 15px;
 }
 
-/* Detalhes sobre o projeto */
+/*-----------------------------------------------------*/
+
+/* UNIVERSAL PROJETOS */
+
+/* detalhes de cada projeto */
 .detalhes {
     position: absolute;
     top: 0;
@@ -706,28 +674,33 @@ i {
     border-radius: 20px;
 }
 
-.projeto-card:hover .detalhes {
-    opacity: 1;
-    pointer-events: auto;
+
+
+.projeto-card.aberto .detalhes {
+    display: block;
 }
 
+
+/* texto dentro dos detalhes */
 .detalhes p {
   font-size: 16px;
   margin-bottom: 15px;
 }
 
+/* links dentro dos detalhes */
 .detalhes a {
   margin: 5px 0;
   display: inline-block;
 }
 
+/* texto pequeno dentro dos detalhes */
 small {
   color: #ccc;
   font-size: 22px;
 }
 
 
-/* Tecnologias usadas */
+/* tecnologias usadas em cada projeto */
 .tecnologias {
     display: flex;
     flex-wrap: wrap;
@@ -736,6 +709,7 @@ small {
     margin: 20px 0 10px;
 }
 
+/* cada tecnologia usada */
 .tec {
     background-color: #66056d69;
     border: 1.5px solid #66056d;
@@ -747,13 +721,14 @@ small {
     transition: all 0.3s ease;
 }
 
+/* hover cada tecnologia usada */
 .tec:hover {
     background-color: #66056d;
     color: #f0e6fb;
     box-shadow: 0 0 8px #66056daa;
 }
 
-/* Botão de ver projeto */
+/* link ver projeto */
 .projeto-card a {
     background-color: #66056d;
     border-radius: 15px;
@@ -766,18 +741,33 @@ small {
     transition: background-color 0.3s ease;
 }
 
+/* hover link ver projeto */
 .projeto-card a:hover {
     background-color: #300033;
 }
 
 
-/* Botões escondidos no desktop */
+/* esconde botões detalhes (mobile) */
 .btn-detalhes,
 .btn-fechar-detalhes {
-  display: none;
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #66056d;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 18px;
+    cursor: pointer;
+    font-size: 14px;
 }
 
-/* Desktop - detalhes aparecem no hover */
+.btn-fechar-detalhes {
+    margin-top: 12px;
+    background-color: #300033;
+}
+
+
+/* animação detalhes (mobile) */
 .projeto-card .detalhes {
   display: none;
   transition: max-height 0.3s ease;
@@ -785,21 +775,24 @@ small {
   transform: translateY(20px);
 }
 
+/* mostra detalhes no hover (desktop) */
 .projeto-card:hover .detalhes {
   opacity: 1;
   transform: translateY(0);
   display: block;
 }
 
+/* texto pequeno */
 small {
-    margin: 8px 0;           /* Espaçamento acima e abaixo */
-    font-size: 14px;       /* Tamanho menor que o texto normal */
-    color: #242424;             /* Cor mais suave, cinza */
+    margin: 8px 0;          
+    font-size: 14px;      
+    color: #242424;            
 }
 
 
+/*------------------------------------------------------------------------------------------------------*/
 
-/* Seção: Serviços e Formulário */
+/* SESSÃO SERVIÇOS E FORMULÁRIO */
 .servicos-form {
   max-width: 1200px;
   margin: 60px auto;
@@ -810,6 +803,7 @@ small {
   gap: 60px;
 }
 
+/* cada box de serviços e formulário */
 .servicos-form .servicos,
 .servicos-form .formulario {
   flex: 1 1 450px;
@@ -820,6 +814,7 @@ small {
   text-align: center;
 }
 
+/* titulo de serviços e formulário */
 .servicos-form .servicos h1,
 .servicos-form .form-card h1 {
   font-size: 40px;
@@ -829,12 +824,14 @@ small {
   text-transform: uppercase;
 }
 
+/* lista de serviços */
 .servicos-form .servicos ul {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
 
+/* cada item da lista de serviços */
 .servicos-form .servicos ul li {
   background: var(--purple-bg);
   border-radius: 15px;
@@ -846,17 +843,20 @@ small {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+/* hover cada item da lista de serviços */
 .servicos-form .servicos ul li:hover {
   background: var(--purple-light);
   color: white;
 }
 
+/* formulário de contato */
 .servicos-form .form-card form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* inputs e textarea do formulário */
 .servicos-form .form-card input,
 .servicos-form .form-card textarea {
   padding: 18px 20px;
@@ -867,6 +867,7 @@ small {
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* foco em inputs e textarea do formulário */
 .servicos-form .form-card input:focus,
 .servicos-form .form-card textarea:focus {
   border-color: var(--purple-medium);
@@ -874,6 +875,7 @@ small {
   box-shadow: 0 0 8px var(--purple-medium);
 }
 
+/* botão enviar do formulário */
 .servicos-form .form-card button {
   background: linear-gradient(45deg, var(--purple-medium), var(--purple-dark));
   color: white;
@@ -887,18 +889,19 @@ small {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* hover botão enviar do formulário */
 .servicos-form .form-card button:hover {
   background: linear-gradient(135deg, var(--purple-dark), var(--purple-medium));
   box-shadow: 0 12px 30px var(--shadow-soft);
 }
 
 
-
+/*------------------------------------------------------------------------------------------------------*/
 
 /* SESSÃO CONTATO */
 .contato {
     display: flex;
-    flex-direction: column; /* Alinha os itens (h1 e p) em coluna, com o título em cima */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -913,6 +916,7 @@ small {
 
 }
 
+/* conteúdo da sessão contato */
 .contato-content {
     flex: 1;
     text-align: center;
@@ -926,13 +930,13 @@ small {
       text-transform: uppercase;
 
 }
-/* box da sessão contato */
+/* texto da sessão contato */
 .contato-box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 70px; /* espaço entre as caixinhas */
+    gap: 70px; 
     margin-top: 30px;
 }
 /* cada caixinha da sessão contato */
@@ -959,6 +963,7 @@ small {
 
 }   
 
+/* hover cada botão da sessão contato */
 .contato-box-content button:hover {
     transform: translateY(-10px);
 }
@@ -972,18 +977,22 @@ small {
     font-size: 40px;
 }
 
+/* remove sublinhado dos links da sessão contato */
 .contato-box-content a {
     outline: none;
-    text-decoration: none; /* remove qualquer sublinhado */
+    text-decoration: none;
 }
 
+/* remove outline e shadow ao focar ou clicar nos links e botões da sessão contato */
 .contato-box-content a:focus,
 .contato-box-content a:active,
 .contato-box-content button:focus,
 .contato-box-content button:active {
     outline: none;
-    box-shadow: none; /* caso algum shadow cause essa linha */
+    box-shadow: none; 
 }
+
+/*------------------------------------------------------------------------------------------------------*/
 
 /* FOOTER */
 footer {
@@ -997,10 +1006,9 @@ footer {
     width: 100%;
     z-index: 10;
     margin-top: 50px;
-    
-   
 }
 
+/* texto do footer */
 footer p {
     text-decoration: none;
     font-weight: bold;
@@ -1010,10 +1018,12 @@ footer p {
  
 }
 
+/*------------------------------------------------------------------------------------------------------*/
+
 #btnTopo {
-  display: flex;               /* sempre flex para alinhar o ícone */
-  justify-content: center;     /* centralizar horizontalmente */
-  align-items: center;         /* centralizar verticalmente */
+  display: flex;               
+  justify-content: center;     
+  align-items: center;         
   position: fixed;
   bottom: 30px;
   right: 30px;
@@ -1032,12 +1042,13 @@ footer p {
 }
 
 
-
+/* hover botão topo */
 #btnTopo:hover {
   background-color: #dbb3df;
   color: black;
 }
 
+/* ícone do botão topo */
 #iconetopo {
   margin: 0;
 }
